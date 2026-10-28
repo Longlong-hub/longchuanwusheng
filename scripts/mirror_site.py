@@ -14,6 +14,21 @@ def adapt(text,source,target,base):
     text=re.sub(r"([\"'])(/[^\"'\s<>]*)",prefix,text)
     return re.sub(r'url\((/[^)\s]+)\)',lambda m:m.group(0) if m.group(1).startswith((base+'/','//')) else 'url('+base+m.group(1)+')',text)
 
+def version_browser_assets(output,base):
+    # Use content versions so a previous deployment's cached scripts cannot survive a new page.
+    versions={}
+    for relative in ('assets/app.js','assets/style.css'):
+        asset=output/relative
+        versions[base+'/'+relative]=hashlib.sha256(asset.read_bytes()).hexdigest()[:12]
+    for page in output.rglob('*.html'):
+        if '.git' in page.relative_to(output).parts:continue
+        text=page.read_text(encoding='utf-8')
+        for path,version in versions.items():
+            for quote_char in ('"',"'"):
+                text=text.replace(quote_char+path+quote_char,quote_char+path+'?v='+version+quote_char)
+        page.write_text(text,encoding='utf-8')
+    return versions
+
 def verify(output,base,target):
     issues=[];pages=0;links=0;images=0
     class Inspector(HTMLParser):
@@ -95,6 +110,7 @@ def main():
         else:dest.write_bytes(data)
     with ThreadPoolExecutor(max_workers=6) as pool:list(pool.map(download,manifest['files']))
     (output/'.nojekyll').write_text('',encoding='utf-8')
+    version_browser_assets(output,base)
     checks=verify(output,base,target)
     result={'source_commit':manifest['source_commit'],'target_url':target+'/','files':len(manifest['files']),'checks':checks}
     if args.retain:result['snapshot_commit']=retain(output,os.environ.get('GITHUB_REPOSITORY',''))
