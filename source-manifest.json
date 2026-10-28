@@ -1,0 +1,1413 @@
+{
+  "source_origin": "https://longchuanwusheng.drtangjunlong.chatgpt.site",
+  "source_commit": "d6fa6dce00dd256d1b9fb9b6747ce381b3b41965",
+  "target_url": "https://longlong-hub.github.io/longchuanwusheng",
+  "base_path": "/longchuanwusheng",
+  "files": [
+    {
+      "path": "404.html",
+      "size": 3255,
+      "sha256": "aa86c5425eeedfc0a5f9825109ff6e715e6c566c4b134c76bcbe824756461888"
+    },
+    {
+      "path": "about/index.html",
+      "size": 6100,
+      "sha256": "8e00aae211e12b6e6b00b36e4f0687b025e9f5bc7c1f2bf7c6b7bc676f4844d7"
+    },
+    {
+      "path": "articles/ai-ecosystem/index.html",
+      "size": 36438,
+      "sha256": "cff83750e46987e9ad6886d39125fb5900c18daf160281685b24614db0bb0578"
+    },
+    {
+      "path": "articles/ai-workflow/index.html",
+      "size": 20332,
+      "sha256": "0bff1390b23b0e8c575ad1524bc677048100a0cde47f9661767a47e761ffe776"
+    },
+    {
+      "path": "articles/at-least-you/index.html",
+      "size": 38072,
+      "sha256": "4c13c10a1e97e80e5f274aaef5cc61f9f5c257d24c9404bc3cf06b86e173592a"
+    },
+    {
+      "path": "articles/dermatology-01/index.html",
+      "size": 63913,
+      "sha256": "ad44a73e2e4c55422eeaf4afd984517f871cf8ea356494adbe32306b016c7669"
+    },
+    {
+      "path": "articles/dermatology-02/index.html",
+      "size": 129773,
+      "sha256": "38e3214237be1c4227f59351184ace16486b706c627524c8c1dab35b69d6152e"
+    },
+    {
+      "path": "articles/dermatology-03/index.html",
+      "size": 68404,
+      "sha256": "255061cc24cecdc91023d2f30d7176f997b77c33bf4183428618e50720e95e24"
+    },
+    {
+      "path": "articles/dermatology-04/index.html",
+      "size": 77800,
+      "sha256": "7af6f31b5c70791138cd8e3fead911dd2f21a0a441c1406394c14bf20f80961f"
+    },
+    {
+      "path": "articles/dermatology-05/index.html",
+      "size": 67386,
+      "sha256": "214d10b41eabc544290efbb851e7bd7e3067788ec733ad518964d73ee1bbc4e8"
+    },
+    {
+      "path": "articles/dermatology-06/index.html",
+      "size": 65731,
+      "sha256": "2c3874375998458348ae9e47291bc91cba60e3d66f54f2e6d13ed93008eff156"
+    },
+    {
+      "path": "articles/dermatology-07/index.html",
+      "size": 87342,
+      "sha256": "f45e44eecc5aa99222ba2e9332e4034ff0c3aff9047392076855d460c7ea22e2"
+    },
+    {
+      "path": "articles/dermatology-bullous/index.html",
+      "size": 52940,
+      "sha256": "84a34ac4dfbaa6ffd70ef4824e7645d51b1764d3fbfb9e78ed04fdf78b9c6253"
+    },
+    {
+      "path": "articles/dermatology-drug-eruption/index.html",
+      "size": 72832,
+      "sha256": "23bec36d10c42677e76a0155136be101d0413d922d55e7362f8acd80ec976779"
+    },
+    {
+      "path": "articles/dermatology-eczema/index.html",
+      "size": 63539,
+      "sha256": "54b7f8ca4ba46f84d858c9c5aeaa5ebfb3cf403d787daad6810f14f682ce92dd"
+    },
+    {
+      "path": "articles/dermatology-std/index.html",
+      "size": 82104,
+      "sha256": "b2250f91a133f86548a7c8451f462e821bd3787b970dc91cf8ec49232c95b6db"
+    },
+    {
+      "path": "articles/feishu-ai-agent/index.html",
+      "size": 29664,
+      "sha256": "f95e576bb2de102f3d9d61f1c3b5d1e51930b1c734512f5dc596addec5b78d45"
+    },
+    {
+      "path": "articles/gift-poems/index.html",
+      "size": 7602,
+      "sha256": "14a7881e433ae4d2792f7858bf7f9e0a75e2f939224d9f0b3fd3c88bd6b2b37f"
+    },
+    {
+      "path": "articles/index.html",
+      "size": 37016,
+      "sha256": "3a14042512cb407f98afd981f7b1c4de0157d061b05729c3a531d927bf8234ac"
+    },
+    {
+      "path": "articles/letter-to-patients/index.html",
+      "size": 63161,
+      "sha256": "b3ac49191a74fd12a4db1a46a801b1fa49d171c390c29f5206aee4e3dc1e6e9b"
+    },
+    {
+      "path": "articles/literature-vault/index.html",
+      "size": 31179,
+      "sha256": "8e5fd22a504b1f092e9266982c1dee85a01997d7fe27f7b772c4808487866f03"
+    },
+    {
+      "path": "articles/moon-and-stars/index.html",
+      "size": 26163,
+      "sha256": "90c6f4eab421fdad49ed68349ac719f5d8ddbf63881b8c7c01114227830ee2dc"
+    },
+    {
+      "path": "articles/philosophical-notes/index.html",
+      "size": 24569,
+      "sha256": "283e48774ac92273133d0828978ee0851223bf71481ffc5d6f1bd63a17f26559"
+    },
+    {
+      "path": "articles/poetry-and-code/index.html",
+      "size": 16327,
+      "sha256": "67732008c5743bb60971a70d6357dc680d795449a1434af8eb5cfea17f58bcba"
+    },
+    {
+      "path": "articles/shiyun-update/index.html",
+      "size": 24568,
+      "sha256": "b8fa4c843da9354f46502013b1f7787ad10196185c52c5210e0a01ab776aa6d3"
+    },
+    {
+      "path": "articles/smart-files-manager/index.html",
+      "size": 23914,
+      "sha256": "645e0f1733d87ea64090591abdaf7387d66e3b2495841a97dea6e6f99e6f6807"
+    },
+    {
+      "path": "articles/star-eyes-moon/index.html",
+      "size": 32476,
+      "sha256": "52ad2796779ecd10e59fa6a70ca8a4c2f6e483112d18cbb320f6865c1b1dc530"
+    },
+    {
+      "path": "articles/writing-for-you-intro/index.html",
+      "size": 40706,
+      "sha256": "186e524cf9dbc3b666100b8380beae8f8ec7a64d974313d5a50760b2a6dd4d5d"
+    },
+    {
+      "path": "assets/app.js",
+      "size": 5555,
+      "sha256": "42340f6240112ecdcc2675cfb333ff3efe92d87058cb5d3314850c6ab09d1984"
+    },
+    {
+      "path": "assets/content/ai-ecosystem/image-01b12c5ba8ae36.png",
+      "size": 3781057,
+      "sha256": "01b12c5ba8ae361b68017fa5733033a6d7a421b8cbcfcdcacf4e23e8118bd37c"
+    },
+    {
+      "path": "assets/content/ai-ecosystem/image-9a4544b939f562.png",
+      "size": 526958,
+      "sha256": "9a4544b939f562fd81a1435527a6c757cd5179b91631e0a6b935723132a92919"
+    },
+    {
+      "path": "assets/content/ai-ecosystem/image-9cb4d32639de29.png",
+      "size": 1055037,
+      "sha256": "9cb4d32639de29f5b95dd95e442556d355564d35f02fe38546fbf146c47e50d8"
+    },
+    {
+      "path": "assets/content/ai-ecosystem/image-c8a52365ee542a.png",
+      "size": 85718,
+      "sha256": "c8a52365ee542a77596ed0680871bff2d74f37b5bdb45b8bdc1a0d6ad1c958ae"
+    },
+    {
+      "path": "assets/content/ai-ecosystem/image-d4e62ff3722073.png",
+      "size": 92327,
+      "sha256": "d4e62ff372207317199d13d837566f35f5da136dc062d102b07d5c7a5a3ac449"
+    },
+    {
+      "path": "assets/content/ai-workflow/image-035137a695121c.png",
+      "size": 178251,
+      "sha256": "035137a695121ca11b27e27c970e3224e6a44c2954385ff107f4d0684111d8da"
+    },
+    {
+      "path": "assets/content/ai-workflow/image-20c2ce5c2c234e.png",
+      "size": 58433,
+      "sha256": "20c2ce5c2c234e3003fa2fa8c2371c154e3e3c1def1417c0ab113bab15d4aced"
+    },
+    {
+      "path": "assets/content/ai-workflow/image-ab30f507364da3.png",
+      "size": 79362,
+      "sha256": "ab30f507364da3533ff2b2733e337b8423da7df5871f458f51449dbb80513d5c"
+    },
+    {
+      "path": "assets/content/ai-workflow/image-da2373d971faa6.png",
+      "size": 25212,
+      "sha256": "da2373d971faa6554a2e8074d9b6f53d8bb0c50ae696e322dfd08e6b38751b2e"
+    },
+    {
+      "path": "assets/content/ai-workflow/image-e62d677e00975b.png",
+      "size": 109044,
+      "sha256": "e62d677e00975bd34041ae4a88bed07026ca9fde71bbee87b3df7a99c11b25ec"
+    },
+    {
+      "path": "assets/content/at-least-you/image-3c11eb195d3812.jpg",
+      "size": 289776,
+      "sha256": "3c11eb195d381216b31d6907bdbc1b45c021c7c39a7e95b4990193a05f1465ec"
+    },
+    {
+      "path": "assets/content/at-least-you/image-8044cc09e6c60d.png",
+      "size": 355841,
+      "sha256": "8044cc09e6c60d727b11788f8b9c519b6d65311ea4ca630c52a56faf630c4927"
+    },
+    {
+      "path": "assets/content/at-least-you/image-9ffd2c3e873e9e.png",
+      "size": 384068,
+      "sha256": "9ffd2c3e873e9ec0642d8ca44d5109e8ea9778e1f1891960651868023003ea1b"
+    },
+    {
+      "path": "assets/content/at-least-you/image-b96f8442775a96.jpg",
+      "size": 18367,
+      "sha256": "b96f8442775a96c3b3733c6de71f29ed83137398b8e7f4a150cadedbb82de3d0"
+    },
+    {
+      "path": "assets/content/at-least-you/image-fbf1de20409f97.jpg",
+      "size": 218648,
+      "sha256": "fbf1de20409f9756043c9da3aa758bf5f33b387090001afabd58e39992cda399"
+    },
+    {
+      "path": "assets/content/dermatology-01/image-0a69b7521f0406.png",
+      "size": 151062,
+      "sha256": "0a69b7521f04061468d8e6103d895f847987112db4b609258430923331dcf3f7"
+    },
+    {
+      "path": "assets/content/dermatology-01/image-0b7effa2d37fdf.jpg",
+      "size": 45251,
+      "sha256": "0b7effa2d37fdfef367636534be57c596446ef90f8fbb6361652155d10c11dd6"
+    },
+    {
+      "path": "assets/content/dermatology-01/image-1f2d76cfd4d7d0.png",
+      "size": 153673,
+      "sha256": "1f2d76cfd4d7d01a2f1e2e6653dfeaa18b3181b4aa84ce54903980ec717e95bb"
+    },
+    {
+      "path": "assets/content/dermatology-01/image-29974756f34e4e.png",
+      "size": 364943,
+      "sha256": "29974756f34e4ec2d6c885348f0105e47045b20cafb7eda97567dbe4f61f8ad3"
+    },
+    {
+      "path": "assets/content/dermatology-01/image-3a4df8a5b2ca32.png",
+      "size": 383844,
+      "sha256": "3a4df8a5b2ca32bb275471473777536526a599b187133dc01d76fda7af71575c"
+    },
+    {
+      "path": "assets/content/dermatology-01/image-481391fe0b6277.jpg",
+      "size": 65258,
+      "sha256": "481391fe0b6277feb931826426a76f8c580d557530656dcecbc40f8bd0131b03"
+    },
+    {
+      "path": "assets/content/dermatology-01/image-6cbeffe705525c.png",
+      "size": 376025,
+      "sha256": "6cbeffe705525cd9dd30268e0bcb6bde6e9b094e76ecbdd0cf630a9a868c7535"
+    },
+    {
+      "path": "assets/content/dermatology-01/image-6f688eb9c91328.jpg",
+      "size": 54463,
+      "sha256": "6f688eb9c9132888eb9a423f39320a0e288503e2dda40f27ea79a4fb2613a548"
+    },
+    {
+      "path": "assets/content/dermatology-01/image-751700b08b1cb4.jpg",
+      "size": 58834,
+      "sha256": "751700b08b1cb49ed6e25e92f83ee97a15b48dd67135782d3da6b49ba8e0f570"
+    },
+    {
+      "path": "assets/content/dermatology-01/image-7eb525ef0e138c.png",
+      "size": 61100,
+      "sha256": "7eb525ef0e138c92f5cc47e7f4a34b9a81ad047696c9e2f647fc256f3b6d3859"
+    },
+    {
+      "path": "assets/content/dermatology-01/image-94562269674ecd.jpg",
+      "size": 45932,
+      "sha256": "94562269674ecda3f7fab40c8a317951f78ac0f76a87d2a5c508ad95f23426d1"
+    },
+    {
+      "path": "assets/content/dermatology-01/image-952d565056e783.jpg",
+      "size": 48812,
+      "sha256": "952d565056e7832d63805dbf6d7b312f98f8307d6a5f41e78ac3ce3839fa509e"
+    },
+    {
+      "path": "assets/content/dermatology-01/image-af653cebf3cb66.jpg",
+      "size": 55819,
+      "sha256": "af653cebf3cb66300d2c1f3ec84227765d58c63de452e4171ddbb1c4f7378ba3"
+    },
+    {
+      "path": "assets/content/dermatology-01/image-afc5f5acdc653a.jpg",
+      "size": 48959,
+      "sha256": "afc5f5acdc653ad2cd55821fd1206b3c35b99790a63a2a47bd03b95d2b486ffd"
+    },
+    {
+      "path": "assets/content/dermatology-01/image-c4cd1862baf754.jpg",
+      "size": 37546,
+      "sha256": "c4cd1862baf754beca948db978ae016e0e6246f97029856ca2e98bd00d86d881"
+    },
+    {
+      "path": "assets/content/dermatology-01/image-c67f87c2250b3e.png",
+      "size": 41296,
+      "sha256": "c67f87c2250b3e3796348ab260f8cd2db5149f4e1d8b34fbc95ddd256bb9a993"
+    },
+    {
+      "path": "assets/content/dermatology-01/image-ccf6bc1855e176.jpg",
+      "size": 46387,
+      "sha256": "ccf6bc1855e176c1ff9b4f027132e4e0baf351fde1ca44d38692b9efda0e4376"
+    },
+    {
+      "path": "assets/content/dermatology-01/image-e5addc80e6bc02.png",
+      "size": 168393,
+      "sha256": "e5addc80e6bc023ff3b94e2c17be7e91cec62a2195d1534b643e74acfa62f565"
+    },
+    {
+      "path": "assets/content/dermatology-01/image-f42dce2ed16d52.png",
+      "size": 551567,
+      "sha256": "f42dce2ed16d52a46393feaa7742768b78e4a602877c995c313cde61ac81ad9a"
+    },
+    {
+      "path": "assets/content/dermatology-02/image-02368a8b457873.png",
+      "size": 49126,
+      "sha256": "02368a8b45787340dacd5ac02a41a95e03b143f54fcbb0344fe445a88b9095d7"
+    },
+    {
+      "path": "assets/content/dermatology-02/image-047c621d76b1bc.jpg",
+      "size": 19285,
+      "sha256": "047c621d76b1bce1859e789940461b4a1ce5e4761a6a1f484f14b692593ec301"
+    },
+    {
+      "path": "assets/content/dermatology-02/image-2e1ddeb60546f4.png",
+      "size": 209993,
+      "sha256": "2e1ddeb60546f453f9b1db3b1b11a5df5a41d13f6e3d7163a4f5999f3692a2bb"
+    },
+    {
+      "path": "assets/content/dermatology-02/image-308c71ed279281.jpg",
+      "size": 22617,
+      "sha256": "308c71ed2792819a2db8722767e63c7f3ba9f519333c3c2ad899c59e3b1b173f"
+    },
+    {
+      "path": "assets/content/dermatology-02/image-39b79a2b5011ff.jpg",
+      "size": 39590,
+      "sha256": "39b79a2b5011fffb7fa74f1a922ea8c64682d704e3eacce1b48c515b81edd505"
+    },
+    {
+      "path": "assets/content/dermatology-02/image-3af69d046655d9.jpg",
+      "size": 23760,
+      "sha256": "3af69d046655d976c796ea1d3eda1167d17b90bd81e10c3b7e7c5dddb0e1ab11"
+    },
+    {
+      "path": "assets/content/dermatology-02/image-40d361b9aceb6b.png",
+      "size": 173118,
+      "sha256": "40d361b9aceb6b0011ad205c28bc7ec96a7c7d3b960dac93d98295780632bd81"
+    },
+    {
+      "path": "assets/content/dermatology-02/image-59fc5ef2347843.jpg",
+      "size": 23687,
+      "sha256": "59fc5ef234784339ce1a6c8fe33ae36eb23a142707aed8be9b664d45312078f7"
+    },
+    {
+      "path": "assets/content/dermatology-02/image-60c331bd6d25b4.jpg",
+      "size": 20845,
+      "sha256": "60c331bd6d25b4303390bdfd890ab958081b975b6eb9ebca18a9d9ab19e5b52e"
+    },
+    {
+      "path": "assets/content/dermatology-02/image-61e4c3c2a4f1ee.jpg",
+      "size": 31581,
+      "sha256": "61e4c3c2a4f1ee7bc8d232bccaefbd77e2cef6d73881296035bfa6b20173913c"
+    },
+    {
+      "path": "assets/content/dermatology-02/image-65263de5608e05.jpg",
+      "size": 27078,
+      "sha256": "65263de5608e05bfad3c564c87a893d5524e92935949e175611681bf8e8bc105"
+    },
+    {
+      "path": "assets/content/dermatology-02/image-8958c5556dc2f8.jpg",
+      "size": 62585,
+      "sha256": "8958c5556dc2f83631c00a84b743d53dbf5d31123594236faa8165e4f5d04f64"
+    },
+    {
+      "path": "assets/content/dermatology-02/image-93feee5dc3ec38.jpg",
+      "size": 35566,
+      "sha256": "93feee5dc3ec38eb749a04f675613d3da2af8462595e5a014930582c35dd103c"
+    },
+    {
+      "path": "assets/content/dermatology-02/image-9ad49da49c5fc2.jpg",
+      "size": 75422,
+      "sha256": "9ad49da49c5fc20892e5d4a47ce52c8d55d1e653d1055e70c25f07a682aa6c5e"
+    },
+    {
+      "path": "assets/content/dermatology-02/image-a0be45840ada26.jpg",
+      "size": 56446,
+      "sha256": "a0be45840ada26871bcde3055999ba9d9f187ee530cc5dc5072c3d6d2e76b5f2"
+    },
+    {
+      "path": "assets/content/dermatology-02/image-a35c2915213f00.jpg",
+      "size": 58603,
+      "sha256": "a35c2915213f00d6a1708dfd30e5a353d3b679ec56546f718bd689be9b2e8dc6"
+    },
+    {
+      "path": "assets/content/dermatology-02/image-aa3d04de044bc7.png",
+      "size": 189285,
+      "sha256": "aa3d04de044bc73cc981ec6631d03f3b54533140c7ddb7227e3b46af628e90ed"
+    },
+    {
+      "path": "assets/content/dermatology-02/image-abe3b027eb037d.jpg",
+      "size": 33037,
+      "sha256": "abe3b027eb037dd972d2be8c5a42a5f03719eb92b151231033ee68973f0926b4"
+    },
+    {
+      "path": "assets/content/dermatology-02/image-ac0103e635943f.jpg",
+      "size": 41733,
+      "sha256": "ac0103e635943fa6937f3141f6c10ca5d4825e7ca5f9464c5a37a484005e1a09"
+    },
+    {
+      "path": "assets/content/dermatology-02/image-b6ad1655bb15f7.png",
+      "size": 161514,
+      "sha256": "b6ad1655bb15f763470fdb91aa50e16562c08cec921d4b72ab400de32ddb5e95"
+    },
+    {
+      "path": "assets/content/dermatology-02/image-ba96ceb40a232b.jpg",
+      "size": 36620,
+      "sha256": "ba96ceb40a232be83e8fcc116a320642cee6f8fb0f07d6cc78cc822ff6df6dca"
+    },
+    {
+      "path": "assets/content/dermatology-02/image-c6bb18c5eac55f.jpg",
+      "size": 30761,
+      "sha256": "c6bb18c5eac55f8ec16e2f2bbd5cdbdfb35b7036a49cba33f8c13f18c6477696"
+    },
+    {
+      "path": "assets/content/dermatology-02/image-d6c042b4c757e0.jpg",
+      "size": 49311,
+      "sha256": "d6c042b4c757e0b4de259adc7f29d9718785666d1638558623c530170a755f7c"
+    },
+    {
+      "path": "assets/content/dermatology-02/image-ed573f16571aed.jpg",
+      "size": 30308,
+      "sha256": "ed573f16571aed17f547a99a958be5c022c3d61c8c8a4ade78ae82b979a8ce1c"
+    },
+    {
+      "path": "assets/content/dermatology-02/image-f1dd4de3385dc6.jpg",
+      "size": 58804,
+      "sha256": "f1dd4de3385dc613388058a28fdb26cea8eae8cb0a73c72ac0a532bd02ed0bfe"
+    },
+    {
+      "path": "assets/content/dermatology-03/image-2a7847bfaa9a63.png",
+      "size": 200167,
+      "sha256": "2a7847bfaa9a63a6ae23a4f52d252693191bfd0487453ea50899d15663c4e28b"
+    },
+    {
+      "path": "assets/content/dermatology-03/image-302d9205ed6e3c.png",
+      "size": 324802,
+      "sha256": "302d9205ed6e3c87203b4cd7075ec45c9245502d0fb5bdf79c807236e6330239"
+    },
+    {
+      "path": "assets/content/dermatology-03/image-f214c70870a2f6.png",
+      "size": 42691,
+      "sha256": "f214c70870a2f672fd59f7c86fbf94a4f2add2b4dbc5b0dbb7161c2b9d409ec4"
+    },
+    {
+      "path": "assets/content/dermatology-04/image-10dbc0c0fb3510.jpg",
+      "size": 28995,
+      "sha256": "10dbc0c0fb35100358962e8903dd89bfd71846d46eac940f61854f4aaf689138"
+    },
+    {
+      "path": "assets/content/dermatology-04/image-23db474adee8c3.png",
+      "size": 408550,
+      "sha256": "23db474adee8c36e465cd52425ce86580718f7aab8062605a3e81a4833ef6590"
+    },
+    {
+      "path": "assets/content/dermatology-04/image-2a1499ee10fda0.png",
+      "size": 394824,
+      "sha256": "2a1499ee10fda047c14f72652d64b793074b4242205ec1be3e2d7b04f4ae827d"
+    },
+    {
+      "path": "assets/content/dermatology-04/image-4f1f9d1543c6d6.png",
+      "size": 51343,
+      "sha256": "4f1f9d1543c6d6894a61603eb0ec614b46982d193f80b6f8317084f4b73c001a"
+    },
+    {
+      "path": "assets/content/dermatology-04/image-75767a75670ebf.jpg",
+      "size": 23660,
+      "sha256": "75767a75670ebfc2a12fc3f6c6e3b386fa2be605275debdea2b87b1fb7d52fa9"
+    },
+    {
+      "path": "assets/content/dermatology-04/image-980a8bd9a49564.jpg",
+      "size": 43151,
+      "sha256": "980a8bd9a495649d23f8c8b583f6f87c6495b8c43365d49dc8ce20c7d22ed55c"
+    },
+    {
+      "path": "assets/content/dermatology-04/image-9cb5778a1e88f5.jpg",
+      "size": 22671,
+      "sha256": "9cb5778a1e88f5523f295b53b1565f870a745ff5823fa609482fee40847d6787"
+    },
+    {
+      "path": "assets/content/dermatology-04/image-cba212a533cda2.jpg",
+      "size": 48925,
+      "sha256": "cba212a533cda2025866b891b1bd8baa389d9310ca765a7181213276a1f28072"
+    },
+    {
+      "path": "assets/content/dermatology-04/image-df00d3780cee7e.jpg",
+      "size": 28663,
+      "sha256": "df00d3780cee7ecdc44b55cf6fdfc2c923e43a5c5e485c43e3ca13d5b81b8503"
+    },
+    {
+      "path": "assets/content/dermatology-04/image-f99e2c8d6403be.jpg",
+      "size": 27247,
+      "sha256": "f99e2c8d6403bee694059012fe8b699e9855ce3d26909ac57b371386ccf6dddb"
+    },
+    {
+      "path": "assets/content/dermatology-05/image-1093077e27547b.jpg",
+      "size": 225693,
+      "sha256": "1093077e27547b08aed6bfca7527fa8274cf60947739a1c37fc4be1c4637a84d"
+    },
+    {
+      "path": "assets/content/dermatology-05/image-505c3140020189.jpg",
+      "size": 36412,
+      "sha256": "505c31400201895c236fc729759836b1c9a970de55e83ef7fa3afe0d9f97f1ec"
+    },
+    {
+      "path": "assets/content/dermatology-05/image-8bf29a809f775e.jpg",
+      "size": 28076,
+      "sha256": "8bf29a809f775e9a1c7f5623bedde7a1e0dab2c3626b269b377330627b8cf99e"
+    },
+    {
+      "path": "assets/content/dermatology-05/image-a3ac1efd06b1e5.jpg",
+      "size": 43892,
+      "sha256": "a3ac1efd06b1e5613088644c1b3009739f67bc7629d0373bc5dcef267b0d1d6b"
+    },
+    {
+      "path": "assets/content/dermatology-05/image-a9f3fd77abfb66.png",
+      "size": 53037,
+      "sha256": "a9f3fd77abfb6605083f5c91ff56e8137f7112a3d112711a0773556e01a9a7e6"
+    },
+    {
+      "path": "assets/content/dermatology-05/image-c2012c2569cb98.png",
+      "size": 231093,
+      "sha256": "c2012c2569cb980bc3c4c2a6afdc6282b8d4a0e5b964badcf6653773cd04bf5a"
+    },
+    {
+      "path": "assets/content/dermatology-05/image-f337ce16984f72.jpg",
+      "size": 47330,
+      "sha256": "f337ce16984f72e4c6500fdd21964a4e2b653cf9bb37ad721e9676337cbadb60"
+    },
+    {
+      "path": "assets/content/dermatology-05/image-f56697c78c6381.png",
+      "size": 180989,
+      "sha256": "f56697c78c638150b388d0f536d6660d55a56097ca0dccf8a05001689e414ddc"
+    },
+    {
+      "path": "assets/content/dermatology-06/image-1b95b8bcbf83e2.jpg",
+      "size": 24567,
+      "sha256": "1b95b8bcbf83e228cad3a9f80af226f4da2360bd8b54aab369390411e26e4e10"
+    },
+    {
+      "path": "assets/content/dermatology-06/image-204029ebdfe053.jpg",
+      "size": 20515,
+      "sha256": "204029ebdfe053b8ab038d0c8397fe6b771b6a4c8df99040b06ea7ab949b9261"
+    },
+    {
+      "path": "assets/content/dermatology-06/image-21cd4410dc4230.jpg",
+      "size": 26334,
+      "sha256": "21cd4410dc4230650d8b6c20ab94a5fe1ed5bf3d24faafbdfdac0d85152ec1a8"
+    },
+    {
+      "path": "assets/content/dermatology-06/image-2d40b24fe79f6d.jpg",
+      "size": 19038,
+      "sha256": "2d40b24fe79f6dfa0d68c4044a927fa1634d836f26bf848c7c608290aa89b3ec"
+    },
+    {
+      "path": "assets/content/dermatology-06/image-2e1219f223c215.jpg",
+      "size": 22226,
+      "sha256": "2e1219f223c2153ec91d6a9492eb2db6aa70b80056a28bd2c9b3b8be5128cbf8"
+    },
+    {
+      "path": "assets/content/dermatology-06/image-607fd4d3a2ec69.png",
+      "size": 185871,
+      "sha256": "607fd4d3a2ec69800e212f6912d72108c3d951ae17afd984104b6940457edbea"
+    },
+    {
+      "path": "assets/content/dermatology-06/image-71e137d533565a.png",
+      "size": 200886,
+      "sha256": "71e137d533565a469001352c6764caf91d49e249dc508e5c23c6ac75952b85f4"
+    },
+    {
+      "path": "assets/content/dermatology-06/image-823f4e26e86fb2.jpg",
+      "size": 27579,
+      "sha256": "823f4e26e86fb23d252e3731e38e5fd9d8f91bfaa29ae39cabeda7bccd4d2a8c"
+    },
+    {
+      "path": "assets/content/dermatology-06/image-9e27c2b8e64ee6.png",
+      "size": 150968,
+      "sha256": "9e27c2b8e64ee65fb53f34c2bd302ad25bbdc3658db02e903688c3b969e48e66"
+    },
+    {
+      "path": "assets/content/dermatology-06/image-b9cbcc0ebd0648.jpg",
+      "size": 19038,
+      "sha256": "b9cbcc0ebd0648735d6007d7d3a5d944e1e9001e191031cc2a130fca23e09cc2"
+    },
+    {
+      "path": "assets/content/dermatology-06/image-c50065e47fed3b.jpg",
+      "size": 34862,
+      "sha256": "c50065e47fed3b88a5a6e36c365120ba067031fb054fe5b5d6ef1321b0dae12f"
+    },
+    {
+      "path": "assets/content/dermatology-06/image-cabd8af1d4ee41.jpg",
+      "size": 66572,
+      "sha256": "cabd8af1d4ee41adb0e63738818e12ffdd17e4fbee0ae5e20ed845a7714cbfa9"
+    },
+    {
+      "path": "assets/content/dermatology-06/image-cb6f06202d2725.jpg",
+      "size": 27413,
+      "sha256": "cb6f06202d27253f0fd476aba16d37b8bf1c2c2e5f1454b27749b9e62bb1068b"
+    },
+    {
+      "path": "assets/content/dermatology-06/image-d55d8c2552f3b2.jpg",
+      "size": 24688,
+      "sha256": "d55d8c2552f3b2336442f3e5d1bdbe533bf966953e4ec32923f51d3e44aa5000"
+    },
+    {
+      "path": "assets/content/dermatology-06/image-d75f8b64016d88.png",
+      "size": 55962,
+      "sha256": "d75f8b64016d881498abf244206a8a389caf034452297aedf1aa940e907a534e"
+    },
+    {
+      "path": "assets/content/dermatology-07/image-16d15d32fb3b73.jpg",
+      "size": 28752,
+      "sha256": "16d15d32fb3b738cc3f73e652dacade98017e0341804f7d5c9d8c8ab5dd3cb74"
+    },
+    {
+      "path": "assets/content/dermatology-07/image-295cb40a6512b8.jpg",
+      "size": 35366,
+      "sha256": "295cb40a6512b87cb47502f76af03f2319401f7fc51ab3940203e9b25262bf46"
+    },
+    {
+      "path": "assets/content/dermatology-07/image-2afdfd7c7081d1.png",
+      "size": 1467630,
+      "sha256": "2afdfd7c7081d13cbccd58ceec620739bf0f9e1d70f0d601d5c91518efaab7c2"
+    },
+    {
+      "path": "assets/content/dermatology-07/image-4563dabcc1bba1.jpg",
+      "size": 54644,
+      "sha256": "4563dabcc1bba192c0a95eec41dd168a313f5cf22085906c64930dc9ad837b38"
+    },
+    {
+      "path": "assets/content/dermatology-07/image-4a959aab95a2ee.png",
+      "size": 247056,
+      "sha256": "4a959aab95a2ee417f138bebb857d9bf4555b1b96bde4187df19c171dd797a8c"
+    },
+    {
+      "path": "assets/content/dermatology-07/image-5d0eac90aafcbb.jpg",
+      "size": 42044,
+      "sha256": "5d0eac90aafcbb978159e077e1334f71186c1d6e4a2f99e4ea64cbff93a083c8"
+    },
+    {
+      "path": "assets/content/dermatology-07/image-71f9e91f59a4ff.jpg",
+      "size": 18185,
+      "sha256": "71f9e91f59a4ff2f5c3b79c9a87267956d1ed5b4c091d107ce70b33947872321"
+    },
+    {
+      "path": "assets/content/dermatology-07/image-8632df1b7a0f32.png",
+      "size": 222570,
+      "sha256": "8632df1b7a0f32cb7c2fb6a903933e5b145e516f07b2b0a3d79782d241f89fd9"
+    },
+    {
+      "path": "assets/content/dermatology-07/image-8d09a8e06e6300.jpg",
+      "size": 22477,
+      "sha256": "8d09a8e06e6300beae8bf8c8d45e234f876127b8768a4f9d854d3dca7f5454c9"
+    },
+    {
+      "path": "assets/content/dermatology-07/image-a6b91e50e59ee7.jpg",
+      "size": 22557,
+      "sha256": "a6b91e50e59ee77fa78209920f4dbb0552879a557392593d320b355b94ea9ec0"
+    },
+    {
+      "path": "assets/content/dermatology-07/image-ab67082c7877b5.jpg",
+      "size": 15941,
+      "sha256": "ab67082c7877b564e500fb7e404b72a5b882130a9b9d8b222ba127489e6b34f2"
+    },
+    {
+      "path": "assets/content/dermatology-07/image-abef0d2b4590b4.jpg",
+      "size": 24741,
+      "sha256": "abef0d2b4590b4b8218ff318ac487426c98e5d619a65dcbb71fd69d7a5cfd48e"
+    },
+    {
+      "path": "assets/content/dermatology-07/image-ac9dc21ff8d454.png",
+      "size": 196450,
+      "sha256": "ac9dc21ff8d454d29a7ea90b96282de49b0cd0b3ddf670ef47f5529ba6fbdbe9"
+    },
+    {
+      "path": "assets/content/dermatology-07/image-b30563c44d1447.jpg",
+      "size": 93262,
+      "sha256": "b30563c44d144759d211a5c4b74ae90e21cee543bb2aa959bf94d5d4cf82c53b"
+    },
+    {
+      "path": "assets/content/dermatology-07/image-b7f9f718fc5256.jpg",
+      "size": 23961,
+      "sha256": "b7f9f718fc5256c4fe69d311dec4f30e7a4b30f93b17a011fceb0fb3f7934435"
+    },
+    {
+      "path": "assets/content/dermatology-07/image-d031e4ac9c6c14.jpg",
+      "size": 25389,
+      "sha256": "d031e4ac9c6c14f7178fbdcffcc24e70b6689de0420d3e621903afa5b04bbb6b"
+    },
+    {
+      "path": "assets/content/dermatology-07/image-d7e57ec8523a3a.jpg",
+      "size": 30704,
+      "sha256": "d7e57ec8523a3a0a2028101ff9a1a506072364d5c2606f2ba6eae7fb0dbf8b48"
+    },
+    {
+      "path": "assets/content/dermatology-07/image-f70e1d0f7b1e87.jpg",
+      "size": 29277,
+      "sha256": "f70e1d0f7b1e87b8f3c24bc5476f7145d3d36d7146fc5ede091aeff9d00f6c78"
+    },
+    {
+      "path": "assets/content/dermatology-07/image-fab28fc989df1b.jpg",
+      "size": 28556,
+      "sha256": "fab28fc989df1bfd6004de1cf9c3cd6f36fa3575d020bb86a074280773db0af3"
+    },
+    {
+      "path": "assets/content/dermatology-bullous/image-096b733aa0f03b.jpg",
+      "size": 98895,
+      "sha256": "096b733aa0f03b3bbff3daa91db25b626429daec87659b5487a56bfdc3a89241"
+    },
+    {
+      "path": "assets/content/dermatology-bullous/image-1cae24d0734183.jpg",
+      "size": 31886,
+      "sha256": "1cae24d0734183062c3f81e30613214689d497634cc6d7bc866f04c694483e19"
+    },
+    {
+      "path": "assets/content/dermatology-bullous/image-416efd28e911be.png",
+      "size": 52895,
+      "sha256": "416efd28e911bec6dd8f41dda8660f07db9b27eb314e27c381417c41e0e7b74a"
+    },
+    {
+      "path": "assets/content/dermatology-bullous/image-424f38c0593307.jpg",
+      "size": 41528,
+      "sha256": "424f38c0593307831d0f554be2d834e33fbeb040ee9e318a2434ea0d9d70182e"
+    },
+    {
+      "path": "assets/content/dermatology-bullous/image-4f80239506ceec.jpg",
+      "size": 31150,
+      "sha256": "4f80239506ceec03edfe2277c2d57ece7df44ef2eace8967e8c48bf48ff7f1d1"
+    },
+    {
+      "path": "assets/content/dermatology-bullous/image-6545b787903965.png",
+      "size": 136851,
+      "sha256": "6545b78790396597fa21fef9cbba35371fcf760e0f691586fed912894be57c1d"
+    },
+    {
+      "path": "assets/content/dermatology-bullous/image-687ee63a559f58.jpg",
+      "size": 25176,
+      "sha256": "687ee63a559f58e55586ea0c843372aa88bf34b63f122b72a1ca6b51cdf4b621"
+    },
+    {
+      "path": "assets/content/dermatology-bullous/image-7a6e2b60f5ce79.png",
+      "size": 113216,
+      "sha256": "7a6e2b60f5ce79d677a46d3ff7a54bdf22226bff40b0bd91e935c02e5b727cbc"
+    },
+    {
+      "path": "assets/content/dermatology-bullous/image-7cb44e2cfb8832.jpg",
+      "size": 51908,
+      "sha256": "7cb44e2cfb8832db531c3adda5a577dc94f87182eca0d537580e2aa0c5642947"
+    },
+    {
+      "path": "assets/content/dermatology-bullous/image-85aa2b184863ad.jpg",
+      "size": 48270,
+      "sha256": "85aa2b184863ad1830219056b2bca55339595985d6b3ef375074113d4ac6b9e4"
+    },
+    {
+      "path": "assets/content/dermatology-bullous/image-8ca6765054466e.jpg",
+      "size": 123241,
+      "sha256": "8ca6765054466e28e59b117296c98049720b47b01c140e169e0c1fc50fc2181c"
+    },
+    {
+      "path": "assets/content/dermatology-bullous/image-ad37bd48a39294.jpg",
+      "size": 7220,
+      "sha256": "ad37bd48a39294df30488dd7ccd05a365757a047301555d0bf469a35af99be6f"
+    },
+    {
+      "path": "assets/content/dermatology-bullous/image-dbe0429c1965dd.jpg",
+      "size": 38794,
+      "sha256": "dbe0429c1965ddd6e168323717fea01bff614cd4bdcb46acba452abedb5eae71"
+    },
+    {
+      "path": "assets/content/dermatology-bullous/image-e46cd1a95e68eb.jpg",
+      "size": 28776,
+      "sha256": "e46cd1a95e68eb4b7e2eddca5e2fb7349ea74c5e6c4b6b948a7f2ef031bd7e8a"
+    },
+    {
+      "path": "assets/content/dermatology-bullous/image-e7f2db7db0f74e.jpg",
+      "size": 33375,
+      "sha256": "e7f2db7db0f74eb8c6d604ae0d87a4e71c6a18f05fa0ea5fdb98c81fbb81e7f6"
+    },
+    {
+      "path": "assets/content/dermatology-drug-eruption/image-19318b99ae89b5.jpg",
+      "size": 24455,
+      "sha256": "19318b99ae89b5c1ae171a1dcd5721b4a7444f6a72510a2ed4c3b6607112b27a"
+    },
+    {
+      "path": "assets/content/dermatology-drug-eruption/image-2579b680117dbd.png",
+      "size": 37136,
+      "sha256": "2579b680117dbdb414a304d9931935d3b6c1d2aa1c98775c8a3381b9834dda95"
+    },
+    {
+      "path": "assets/content/dermatology-drug-eruption/image-3e7932c3bb5629.png",
+      "size": 201490,
+      "sha256": "3e7932c3bb5629c3a3ead1c9e737a523d1157b4a0f6a4307749556c697bad38b"
+    },
+    {
+      "path": "assets/content/dermatology-drug-eruption/image-5af08006bee3f9.jpg",
+      "size": 37071,
+      "sha256": "5af08006bee3f9729d360122fdbb9257c1b86d3db6dd50a04908338857943910"
+    },
+    {
+      "path": "assets/content/dermatology-drug-eruption/image-9f7506e9012b7d.jpg",
+      "size": 52312,
+      "sha256": "9f7506e9012b7def1aa9a265301ee87f00c269b670af1ea09acf623b5dea64bf"
+    },
+    {
+      "path": "assets/content/dermatology-drug-eruption/image-a4c228c7b26d00.jpg",
+      "size": 30316,
+      "sha256": "a4c228c7b26d00febc2783defb60da9369118313d4dcc77111428ecc858b9f92"
+    },
+    {
+      "path": "assets/content/dermatology-drug-eruption/image-b06c9e55f9a854.jpg",
+      "size": 62875,
+      "sha256": "b06c9e55f9a85477894b6103c9dabb1a47891a3bd0f6811e3a610f695b9211c3"
+    },
+    {
+      "path": "assets/content/dermatology-drug-eruption/image-b87613f17792fc.png",
+      "size": 211522,
+      "sha256": "b87613f17792fc442b5dc19e123aa22a1da37315ca1329aa1d8412449c3bee5f"
+    },
+    {
+      "path": "assets/content/dermatology-drug-eruption/image-c9ec31a3600162.png",
+      "size": 237010,
+      "sha256": "c9ec31a3600162b67ef09d7a5117cf0fa6ccdebad83a78b0d8b4e33187ee024a"
+    },
+    {
+      "path": "assets/content/dermatology-drug-eruption/image-ec5b15a95b3a03.png",
+      "size": 259782,
+      "sha256": "ec5b15a95b3a036d89d9c3b975861fe0bfcbbef62571e23eaec8efa62163308b"
+    },
+    {
+      "path": "assets/content/dermatology-drug-eruption/image-f8f7eab244169c.jpg",
+      "size": 33445,
+      "sha256": "f8f7eab244169ccb8277f15c598b360210377253914a9527228b7f4d43d31acb"
+    },
+    {
+      "path": "assets/content/dermatology-eczema/image-03f0baca2c9a2f.png",
+      "size": 545280,
+      "sha256": "03f0baca2c9a2fa04a7f313e0fb5386ff26b13bb1fc8f05aacfe48629e1f6697"
+    },
+    {
+      "path": "assets/content/dermatology-eczema/image-33a64a1207fb8c.png",
+      "size": 1441286,
+      "sha256": "33a64a1207fb8c629614bd8ab168b25c7e3b743820db53e9e5a8f4aba3031bec"
+    },
+    {
+      "path": "assets/content/dermatology-eczema/image-361ddcfd7c0307.png",
+      "size": 167995,
+      "sha256": "361ddcfd7c0307a3a6420ceb2938c3f05eb833eb5992b56f870a2ec39ac44ed6"
+    },
+    {
+      "path": "assets/content/dermatology-eczema/image-5f320e8c1d7199.jpg",
+      "size": 34343,
+      "sha256": "5f320e8c1d7199274f9c638d27320aee68bdf4bf14fc484ad4f4c785fe718b08"
+    },
+    {
+      "path": "assets/content/dermatology-eczema/image-8db8c26762fff2.png",
+      "size": 658287,
+      "sha256": "8db8c26762fff2bdbe47c14b06ee8625875f1a8946a0ef1610db1c4381f93105"
+    },
+    {
+      "path": "assets/content/dermatology-eczema/image-960e89fb5c0350.png",
+      "size": 124319,
+      "sha256": "960e89fb5c0350223ab93cf8319e42db56bafefebeca30df0c4cf455af5a5a47"
+    },
+    {
+      "path": "assets/content/dermatology-eczema/image-b2bbdd642b83ae.png",
+      "size": 565449,
+      "sha256": "b2bbdd642b83ae3c34ec928bfeaa6a0b6a6e4825b3a615ecf73326ca6513f80f"
+    },
+    {
+      "path": "assets/content/dermatology-eczema/image-cfc55f7f16adaa.png",
+      "size": 141731,
+      "sha256": "cfc55f7f16adaa7e734b76e19e51f8d2188da0f20d104c7b72b384416772ec7f"
+    },
+    {
+      "path": "assets/content/dermatology-eczema/image-ee36030e19c40e.jpg",
+      "size": 25879,
+      "sha256": "ee36030e19c40ea8ccfe37c2fd36b5001baf6b163641b5738b635f7465593dfe"
+    },
+    {
+      "path": "assets/content/dermatology-std/image-1abfe5836ec6dd.jpg",
+      "size": 19288,
+      "sha256": "1abfe5836ec6dd676ac2f5b77dfc3fef08ddf7010402c48727f5427c7d174ba5"
+    },
+    {
+      "path": "assets/content/dermatology-std/image-1b752a61d78cba.jpg",
+      "size": 41956,
+      "sha256": "1b752a61d78cba6e293c1de184e700c7752524f3ff27d2bd5008c679cc8f0e8a"
+    },
+    {
+      "path": "assets/content/dermatology-std/image-2109930dc94b9e.jpg",
+      "size": 33486,
+      "sha256": "2109930dc94b9ec2e94c2edc6917cc89cbce94018f1a6096da06c00181d103e1"
+    },
+    {
+      "path": "assets/content/dermatology-std/image-2d5a88b8723f44.jpg",
+      "size": 29414,
+      "sha256": "2d5a88b8723f44dda4d8cf2198fbd266f330ca1f892e3e0826247933b02dbf00"
+    },
+    {
+      "path": "assets/content/dermatology-std/image-3abcd6dd420401.jpg",
+      "size": 33269,
+      "sha256": "3abcd6dd42040137453b82a873fd2e33a28841f1e84f2741bdc1e2e6cf55a606"
+    },
+    {
+      "path": "assets/content/dermatology-std/image-5809b879a1b3d6.png",
+      "size": 805232,
+      "sha256": "5809b879a1b3d6449424add11b74997fcb4c3aa6c1e4e13f5fc8caed4f6ef00c"
+    },
+    {
+      "path": "assets/content/dermatology-std/image-74b4168960da4e.png",
+      "size": 1424039,
+      "sha256": "74b4168960da4e940a0148299049abdf35d91cc66ff7a3160b1d60ad788380a3"
+    },
+    {
+      "path": "assets/content/dermatology-std/image-87433cc8aed3d6.jpg",
+      "size": 18239,
+      "sha256": "87433cc8aed3d65f9d6debe6f3540bd7986f04435cee6ab96dbbf402e767dcc8"
+    },
+    {
+      "path": "assets/content/dermatology-std/image-8fa7a2f04193da.jpg",
+      "size": 2884740,
+      "sha256": "8fa7a2f04193dae7e53338c356193b4dc1bb112bc289c133b3a84ee0ac7ec833"
+    },
+    {
+      "path": "assets/content/dermatology-std/image-91a32495d4ab3b.jpg",
+      "size": 22286,
+      "sha256": "91a32495d4ab3bee032c6df3ee66f3b25d7bb6663a6bee93cfcb2738f898c3c3"
+    },
+    {
+      "path": "assets/content/dermatology-std/image-91f79600e4e23b.png",
+      "size": 47903,
+      "sha256": "91f79600e4e23b54d5935914b92bec110da26821ca19eeed1c32ce913f7bc180"
+    },
+    {
+      "path": "assets/content/dermatology-std/image-94baa4d60b23c1.jpg",
+      "size": 40837,
+      "sha256": "94baa4d60b23c1fc8787eefb7d7e33e9cb64bf9f879bbeeb6b4eb55756dd69af"
+    },
+    {
+      "path": "assets/content/dermatology-std/image-99121e6402145f.jpg",
+      "size": 17176,
+      "sha256": "99121e6402145fa7019f6de4a9aa10c97c85f2e9459620410f481f552a13adb6"
+    },
+    {
+      "path": "assets/content/dermatology-std/image-a7c793ec7c63f5.jpg",
+      "size": 23695,
+      "sha256": "a7c793ec7c63f559d5f5615dc3b10a195cdacaa10b97f85b8618a932ab0c772c"
+    },
+    {
+      "path": "assets/content/dermatology-std/image-c0f61260b58700.jpg",
+      "size": 41335,
+      "sha256": "c0f61260b58700d8a3f9aefa7b1a3e6bdecf9c4816294e32b4efb5b09a476200"
+    },
+    {
+      "path": "assets/content/dermatology-std/image-c704eb323a6578.jpg",
+      "size": 40540,
+      "sha256": "c704eb323a65786e6f2039aba475af1498bba0e1b061017ac336e83b313413ed"
+    },
+    {
+      "path": "assets/content/dermatology-std/image-c7ef9b253c9a0b.png",
+      "size": 52550,
+      "sha256": "c7ef9b253c9a0b82d7cca2973281fc620e4dbf2200f08b485ca0985465472efb"
+    },
+    {
+      "path": "assets/content/dermatology-std/image-da901bb63e498a.jpg",
+      "size": 26114,
+      "sha256": "da901bb63e498a8e7391f9749b66801eaaa78740bc4c4b44e98519471ae534e7"
+    },
+    {
+      "path": "assets/content/dermatology-std/image-e9089231e417e0.jpg",
+      "size": 21731,
+      "sha256": "e9089231e417e0ec4731f82f571e03bd9107185db69da719650d0f0f94e04ac5"
+    },
+    {
+      "path": "assets/content/dermatology-std/image-ec22f7194311e3.jpg",
+      "size": 198850,
+      "sha256": "ec22f7194311e31564971a9760188ccc184a8d33b2396ccfd3e1434d75c63f9a"
+    },
+    {
+      "path": "assets/content/feishu-ai-agent/image-14fed9e179faf8.png",
+      "size": 149597,
+      "sha256": "14fed9e179faf8d57c4dc369a613155ce10c136cb3e03ad1de01739e0ab7e2f1"
+    },
+    {
+      "path": "assets/content/feishu-ai-agent/image-1e6e8aba0857c8.png",
+      "size": 48662,
+      "sha256": "1e6e8aba0857c8dbe6f261f03c792515beea66dd14ec69cad7284e12e2cbd946"
+    },
+    {
+      "path": "assets/content/feishu-ai-agent/image-64d5d41768538c.png",
+      "size": 254436,
+      "sha256": "64d5d41768538cc56cc0a83f5f0b7767715a1d8d3d4d7414b740ba5502d5e4bb"
+    },
+    {
+      "path": "assets/content/feishu-ai-agent/image-769f0558ef4335.png",
+      "size": 114133,
+      "sha256": "769f0558ef4335a74930f84d37cdfa133ba5d6a16be095f53fe7f19bbbf4c8c4"
+    },
+    {
+      "path": "assets/content/feishu-ai-agent/image-8104b956a61886.png",
+      "size": 615466,
+      "sha256": "8104b956a61886515632e8f5e8e58f9a5dbe6b6f270004d34c5a8123a140cf2f"
+    },
+    {
+      "path": "assets/content/feishu-ai-agent/image-82a15ad3e3f920.png",
+      "size": 291202,
+      "sha256": "82a15ad3e3f920d2933cd5c0ff75edfb569ad6483558d20f0aa3175473305bf9"
+    },
+    {
+      "path": "assets/content/feishu-ai-agent/image-8de51c0a8a6fa1.png",
+      "size": 139132,
+      "sha256": "8de51c0a8a6fa178c3ecead555dd95c310155c386a0e106c48fd7e182e76e150"
+    },
+    {
+      "path": "assets/content/feishu-ai-agent/image-8e218a99452767.png",
+      "size": 419052,
+      "sha256": "8e218a9945276764963622ef0694584927d7e7fdb3a734bf01e656d0c9a7531c"
+    },
+    {
+      "path": "assets/content/feishu-ai-agent/image-9cf996cb838b77.png",
+      "size": 521048,
+      "sha256": "9cf996cb838b773031ba5b247e065e8a14c79e8cf87aa66a0871f2df6ed52b18"
+    },
+    {
+      "path": "assets/content/feishu-ai-agent/image-a646e33a977729.png",
+      "size": 562849,
+      "sha256": "a646e33a9777294a83fc2f638403dbeb94792a563d281a09a229cd7870625d14"
+    },
+    {
+      "path": "assets/content/feishu-ai-agent/image-c20e5a8459aa1e.png",
+      "size": 138390,
+      "sha256": "c20e5a8459aa1e7fa9042ad26b99b1332c5e03d1cca84a5af339b42446c796a1"
+    },
+    {
+      "path": "assets/content/feishu-ai-agent/image-cd050f1a07880a.png",
+      "size": 1518639,
+      "sha256": "cd050f1a07880a7b4874dc6709baf56f49e08cfe30c1c8f908cbd00d740483b8"
+    },
+    {
+      "path": "assets/content/feishu-ai-agent/image-d966383bd7689b.png",
+      "size": 157920,
+      "sha256": "d966383bd7689b95dfd7d3ead9761a053b56ee8d5daca108b481893f32da3597"
+    },
+    {
+      "path": "assets/content/feishu-ai-agent/image-f89702d5d4aa15.png",
+      "size": 533463,
+      "sha256": "f89702d5d4aa152f262c13bc4205e569353d949743e86c4bfcc87682ddb3f68d"
+    },
+    {
+      "path": "assets/content/letter-to-patients/image-f9b500fea963d9.png",
+      "size": 37120,
+      "sha256": "f9b500fea963d9586cf9a7b5678fe8a7c3979afb21a28865233f53832d17c70a"
+    },
+    {
+      "path": "assets/content/literature-vault/image-8a35ea05f41659.png",
+      "size": 3042240,
+      "sha256": "8a35ea05f416590c212579a58e75220d472519a837b8f5644fefeee1b5c661ae"
+    },
+    {
+      "path": "assets/content/literature-vault/image-b05ab015bf621a.png",
+      "size": 2910894,
+      "sha256": "b05ab015bf621a42330e740a579c01c8bfbbc81d878344d4cf395bb717ed1a13"
+    },
+    {
+      "path": "assets/content/moon-and-stars/image-0430d8d26cf91c.jpg",
+      "size": 531768,
+      "sha256": "0430d8d26cf91cf2ae963fecca5efc13a39d463193d1ea40e0489fbd13cb623c"
+    },
+    {
+      "path": "assets/content/moon-and-stars/image-2e7d81ac372658.jpg",
+      "size": 651410,
+      "sha256": "2e7d81ac3726584454112a7897abaa8111a39543ceeffa2f3505d1ae87f69af9"
+    },
+    {
+      "path": "assets/content/moon-and-stars/image-387fd37f826598.jpg",
+      "size": 567799,
+      "sha256": "387fd37f826598690c492af561f355ecb5b5c6dc84eec4b16cd36783b282f4f1"
+    },
+    {
+      "path": "assets/content/moon-and-stars/image-ae853150c1b461.jpg",
+      "size": 357161,
+      "sha256": "ae853150c1b46115fadf34edab6d5a55be2c7a745f788e64305843d603f1c9da"
+    },
+    {
+      "path": "assets/content/moon-and-stars/image-ce031fad86d485.png",
+      "size": 755511,
+      "sha256": "ce031fad86d48503d10d213e411b8db994ce5401e51125f34080f3d5bc3ea412"
+    },
+    {
+      "path": "assets/content/moon-and-stars/image-d80f6d45b84ff7.jpg",
+      "size": 327951,
+      "sha256": "d80f6d45b84ff758928981797f6616221a2b804522d902327a5844a89618e16c"
+    },
+    {
+      "path": "assets/content/philosophical-notes/image-2c0ed9b8e7b853.jpg",
+      "size": 263935,
+      "sha256": "2c0ed9b8e7b853ccd0862da5ef7ef5d9c4ab06f0aa2fd3aec5fc8461b8cbe131"
+    },
+    {
+      "path": "assets/content/philosophical-notes/image-d154a4e121db84.png",
+      "size": 572211,
+      "sha256": "d154a4e121db8407b8be65f81d3a20db786978570bbeb11760a93d8835d09f74"
+    },
+    {
+      "path": "assets/content/philosophical-notes/image-dcb39d1f772a7a.jpg",
+      "size": 67887,
+      "sha256": "dcb39d1f772a7a5eebdaadc2954ad62e4caac73f15e1e1de45fe64a2a414a55b"
+    },
+    {
+      "path": "assets/content/philosophical-notes/image-efca5657dde003.jpg",
+      "size": 217450,
+      "sha256": "efca5657dde00359d98456e38d98f8850abcf3faaa4ba97714706a3a2537fbcf"
+    },
+    {
+      "path": "assets/content/poems-2023/image-fae9ec2529b136.webp",
+      "size": 583876,
+      "sha256": "448592b1a57bb6e41defc5ee1377c468a7f5c24c4e7236147fb155a3232fd626"
+    },
+    {
+      "path": "assets/content/poems-2024/image-868b7af0844181.webp",
+      "size": 764932,
+      "sha256": "69058ea29529be988993a984a8d9d2826999a01af2cf63c29cd66f1ef83c8cd4"
+    },
+    {
+      "path": "assets/content/poems-2025/image-a7604337f9bafd.webp",
+      "size": 850276,
+      "sha256": "6c837e724bff7a0ea997d3a7d59db6bd0acec582f52c549205f0e642eeb12729"
+    },
+    {
+      "path": "assets/content/poetry-and-code/image-07886f2a6ac240.png",
+      "size": 1275453,
+      "sha256": "07886f2a6ac24067d6b2de7e6f0ad1415025b3e8e6cf6a6b26cc8afbf20769f0"
+    },
+    {
+      "path": "assets/content/poetry-and-code/image-7947ac47ea646b.png",
+      "size": 1436143,
+      "sha256": "7947ac47ea646bb65e2663d4e117ecb8c06e7322bc2edcb2bf370c3d43a3a6ce"
+    },
+    {
+      "path": "assets/content/poetry-and-code/image-a866016e75a485.png",
+      "size": 2488210,
+      "sha256": "a866016e75a4858ee7adb240e8dbf85c8c1107f4662f03d30ebdb14ff6fd5cc6"
+    },
+    {
+      "path": "assets/content/poetry-and-code/image-e7716cef5f2dec.png",
+      "size": 1317106,
+      "sha256": "e7716cef5f2decddc26fb08707e1a37d3d9c276d4c7804dc0f2b022f279f617f"
+    },
+    {
+      "path": "assets/content/shiyun-update/image-09010c259ea5ea.png",
+      "size": 305433,
+      "sha256": "09010c259ea5eac30c7f97d8f20656e8a9c1bc28a7946bfa95f2f00c4cfb86c6"
+    },
+    {
+      "path": "assets/content/shiyun-update/image-d2fdc7c52bac18.png",
+      "size": 70001,
+      "sha256": "d2fdc7c52bac186964982e7d98852097067868e19a2ca7dcd1954915889b35a8"
+    },
+    {
+      "path": "assets/content/shiyun-update/image-f5951c40c4f8d6.png",
+      "size": 79728,
+      "sha256": "f5951c40c4f8d6aef40bad338de09397f79114e1ee2ad37bbb8bccb567c1aaa5"
+    },
+    {
+      "path": "assets/content/smart-files-manager/image-4c1a2b7b9f16bc.png",
+      "size": 1273945,
+      "sha256": "4c1a2b7b9f16bc1c7eb964e2d7968c2d0e5aca6b40eabff92877ad2e40aa2a0f"
+    },
+    {
+      "path": "assets/content/smart-files-manager/image-96b7f56bf308e5.png",
+      "size": 21754046,
+      "sha256": "96b7f56bf308e555e115c32214e8d6e612e50fe8da5f5e7b6067a5b1107b4bd3"
+    },
+    {
+      "path": "assets/content/smart-files-manager/image-bdea2c5e58369c.png",
+      "size": 1133414,
+      "sha256": "bdea2c5e58369c3790eaa059c7ea89238a80a8d0fb57ffa646613cc1f7a2d313"
+    },
+    {
+      "path": "assets/content/star-eyes-moon/image-324d3279c329e5.png",
+      "size": 748341,
+      "sha256": "324d3279c329e503e40104a8598ae93029322361ddd4849b0e9a4fb3e6bc2445"
+    },
+    {
+      "path": "assets/content/star-eyes-moon/image-526118490effef.png",
+      "size": 305039,
+      "sha256": "526118490effefd1b9b959edf9c6c0deeeb11325352f3f7e293116059ff7be05"
+    },
+    {
+      "path": "assets/content/star-eyes-moon/image-88c983bba76903.jpg",
+      "size": 38381,
+      "sha256": "88c983bba769038284ef7ea702c8ea7384b0d58fe776c8c8896d31ed58456678"
+    },
+    {
+      "path": "assets/content/star-eyes-moon/image-d18ba5d822c57d.jpg",
+      "size": 68957,
+      "sha256": "d18ba5d822c57d3a27f5d5ce941eadb817e17e0f0b88c2223069f03823f4e9f9"
+    },
+    {
+      "path": "assets/content/star-eyes-moon/image-e4217f00c63802.jpg",
+      "size": 1781801,
+      "sha256": "e4217f00c638027904cd603f0799dc61cefb8f15158a5c72b2d5004e7d8aa8c8"
+    },
+    {
+      "path": "assets/content/writing-for-you-intro/image-180d958cb6b208.png",
+      "size": 78704,
+      "sha256": "180d958cb6b208613b97ad481c3ec951b9eed3c2b17581180f8ce1f77ced865b"
+    },
+    {
+      "path": "assets/content/writing-for-you-intro/image-24c3af894123ae.png",
+      "size": 3374214,
+      "sha256": "24c3af894123ae73701f93bf6fa5419dc000a189d40898120baebd30eaa40a28"
+    },
+    {
+      "path": "assets/content/writing-for-you-intro/image-3a004b79b24fbb.png",
+      "size": 472087,
+      "sha256": "3a004b79b24fbb2dcc8afc6192df72339b1c9044080458da315d2da689ddf043"
+    },
+    {
+      "path": "assets/content/writing-for-you-intro/image-63ea1c511c1f90.png",
+      "size": 483857,
+      "sha256": "63ea1c511c1f901b0dccc31823ccf55ff8fa5824fa7888443beddda1bd65244c"
+    },
+    {
+      "path": "assets/content/writing-for-you-intro/image-88d556989871a1.png",
+      "size": 574952,
+      "sha256": "88d556989871a17317f5b12000014fefd883099d0bbfd0c12acaa748939c720f"
+    },
+    {
+      "path": "assets/content/writing-for-you-intro/image-d5ff7afdf737dd.jpg",
+      "size": 50635,
+      "sha256": "d5ff7afdf737dd59f18cfc0e1740b4a21155ca3eddd5d1ca50b2b97b622596fb"
+    },
+    {
+      "path": "assets/covers/gift-poems.svg",
+      "size": 1899,
+      "sha256": "bb1909246e804f587dcb4152a3520695472e5cfb4feb68d39898657ae41cc32c"
+    },
+    {
+      "path": "assets/covers/poetry-and-code.jpg",
+      "size": 142042,
+      "sha256": "b6cfd7d7443cbf5bbce3ba8eaa53c3b999fe6f09d33a2789d7a23cb584b6b685"
+    },
+    {
+      "path": "assets/favicon.svg",
+      "size": 5013,
+      "sha256": "fbef1965d75cef0ae0696f62414c81fdca7aa98f6a2e057cc950a558320605a4"
+    },
+    {
+      "path": "assets/long-seal-v2.svg",
+      "size": 5013,
+      "sha256": "fbef1965d75cef0ae0696f62414c81fdca7aa98f6a2e057cc950a558320605a4"
+    },
+    {
+      "path": "assets/profile/barcelona.webp",
+      "size": 1901952,
+      "sha256": "1686fc71cf21cd26ee5ee231fd1212389b6fea643c7f03dbb38b16a305a160f2"
+    },
+    {
+      "path": "assets/profile/coast.webp",
+      "size": 2578544,
+      "sha256": "51b13b404daad6aafa088391bc94f226d22260dd9b700290ae85bd38366590b3"
+    },
+    {
+      "path": "assets/profile/dubai.webp",
+      "size": 1711812,
+      "sha256": "a1af9573b92c331037eb0ad1cceb04fcb54ef01792afe77b7f111b5e0578097e"
+    },
+    {
+      "path": "assets/profile/portrait.webp",
+      "size": 2602526,
+      "sha256": "98fa8511c01e4652ed90a93fd168b6bd58a30fb3f2386098c40a556586713e38"
+    },
+    {
+      "path": "assets/profile/wechat-personal.jpg",
+      "size": 105012,
+      "sha256": "dd7f983cb0866ddefbdc0a1c5274ef5fd8a394733cc5d14c29d7ff80619e0f5d"
+    },
+    {
+      "path": "assets/profile/wechat.jpg",
+      "size": 41093,
+      "sha256": "ca1ac21e1acc50487ba7aca829195d7a928722627bf04d2cc4f63d8fb60e76f8"
+    },
+    {
+      "path": "assets/projects/shiyun.webp",
+      "size": 147874,
+      "sha256": "8eb516c8880ee362c6b2d2b33c3a04227b7728666ae79de1131589b79c1d18a2"
+    },
+    {
+      "path": "assets/projects/smart-cover.svg",
+      "size": 2300,
+      "sha256": "5a97a52d63c7d2484760f4159487ca0f47792bdffe9b3ced76378a6e7c9ffb00"
+    },
+    {
+      "path": "assets/projects/smart-files.webp",
+      "size": 2580920,
+      "sha256": "0f710ac2be240b217a82f4dc3f6f6601afa618c720f5fdfb6bbfe994ea881421"
+    },
+    {
+      "path": "assets/projects/writing-home.webp",
+      "size": 377174,
+      "sha256": "85f979bfcc4720da34a97995bac1f2ac35e7e23b1e3ea590ff0a8f9c294c57be"
+    },
+    {
+      "path": "assets/style.css",
+      "size": 28763,
+      "sha256": "580f9cc0047060fe2bd171d763d038922f51d2336d8d5d8fe50f1b736f5beda3"
+    },
+    {
+      "path": "build-manifest.json",
+      "size": 17817,
+      "sha256": "4f143669155646ca25f070befe5f3932e29d029936196de9b40519309cd511a6"
+    },
+    {
+      "path": "data/catalog.json",
+      "size": 12989,
+      "sha256": "1d6951a07f519aa498524d972ca5892c4b6ced824dafebd8bdebe85e3b1b402f"
+    },
+    {
+      "path": "data/poems.json",
+      "size": 82629,
+      "sha256": "ce77f75981d49bdfef0f7022dd7cca06a65884548fb7792d27f601e0ace2d901"
+    },
+    {
+      "path": "feed.xml",
+      "size": 14034,
+      "sha256": "f1aa332510db1c34afebf066e041fcf0b918b4102d933fe0e043bcb1f54063a9"
+    },
+    {
+      "path": "index.html",
+      "size": 45464,
+      "sha256": "702c4cc275eb5919c921030377a13c88a67ae3c5ad67e37022f4508c874fad32"
+    },
+    {
+      "path": "poetry/2023/index.html",
+      "size": 118090,
+      "sha256": "7d7b5bfabb5c1aec994692d8f9bac8ae14097127d834c7503817883228fe7b85"
+    },
+    {
+      "path": "poetry/2024/index.html",
+      "size": 95793,
+      "sha256": "40273bbe1db7cb551ac95f7e473e29e5c37723404b9d15b6cfabaddc1ffdceb4"
+    },
+    {
+      "path": "poetry/2025/index.html",
+      "size": 59327,
+      "sha256": "7339f85c50fee102a69608a007c85c685d1dada95f5eec5345ba5a30789ff3ea"
+    },
+    {
+      "path": "poetry/index.html",
+      "size": 5742,
+      "sha256": "0a29d88d551b616f1ef4fa7d1f86342762f948d0c55a66e6de3058391c9340ee"
+    },
+    {
+      "path": "projects/index.html",
+      "size": 6085,
+      "sha256": "374161cb2348a9f7c3866c5555504f03e182dfe8eb5f3bd0a9449c3b3189359a"
+    },
+    {
+      "path": "projects/literature-vault/index.html",
+      "size": 4593,
+      "sha256": "05df6c7136d2138d28a21fa4b3b25d2334cf5069d1f9d29dff16ff7fe6e35743"
+    },
+    {
+      "path": "projects/smart-files-manager/index.html",
+      "size": 4523,
+      "sha256": "008954f08f948f9d2a12481f2ad27a0d851b8dd3565ff2f60c698d8e234af32b"
+    },
+    {
+      "path": "projects/writing-for-you/index.html",
+      "size": 4531,
+      "sha256": "76e080edd670a3741a8fc1934f29b485cb3bbbd62be3319dbbfa468110bb9e7a"
+    },
+    {
+      "path": "robots.txt",
+      "size": 99,
+      "sha256": "2303e242d70d256d4dd8a2752f1f6d0d119e9087f45c169f989ddf99be4bd94a"
+    },
+    {
+      "path": "science/dermatovenereology/index.html",
+      "size": 19768,
+      "sha256": "bc9a738a7212433e0a454688e839c6071beb8599d57439ccd49b9083be714219"
+    },
+    {
+      "path": "science/index.html",
+      "size": 20157,
+      "sha256": "96c7aa82bac32bbcedcfcfeefcbea3def4111a086b47da43a409e4bf5eed86ff"
+    },
+    {
+      "path": "sitemap.xml",
+      "size": 3735,
+      "sha256": "f9b0a0e783b376836561215df777b9e728e199b043e4c340dfde9bbfe4535ca4"
+    }
+  ]
+}
