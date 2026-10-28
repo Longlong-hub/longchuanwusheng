@@ -10,7 +10,7 @@ def adapt(text,source,target,base):
     text=text.replace(source,target)
     def prefix(m):
         q,p=m.groups()
-        return m.group(0) if p.startswith('//') or p==base or p.startswith(base+'/') else q+base+p
+        return m.group(0) if p.startswith(('//','/#')) or p==base or p.startswith(base+'/') else q+base+p
     text=re.sub(r"([\"'])(/[^\"'\s<>]*)",prefix,text)
     return re.sub(r'url\((/[^)\s]+)\)',lambda m:m.group(0) if m.group(1).startswith((base+'/','//')) else 'url('+base+m.group(1)+')',text)
 
@@ -34,7 +34,7 @@ def verify(output,base,target):
         pages+=1;Inspector().feed(f.read_text(encoding='utf-8'))
     js=(output/'assets/app.js').read_text(encoding='utf-8')
     if "fetch('"+base+"/data/poems.json')" not in js:issues.append('Random poem data path')
-    if "link.href='"+base+"/poetry/'" not in js:issues.append('Random poem destination')
+    if "link.href='"+base+"/poetry/'+p.year+'/#'+p.anchor" not in js:issues.append('Random poem destination and fragment')
     if issues:raise RuntimeError(json.dumps(issues[:20],ensure_ascii=False))
     return {'html_pages':pages,'internal_targets':links,'image_references':images,'issues':[]}
 
@@ -102,3 +102,4 @@ def main():
     if os.environ.get('GITHUB_STEP_SUMMARY'):
         with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8') as f:f.write('## Verified website copy\n\n'+json.dumps(result,ensure_ascii=False,indent=2)+'\n')
 if __name__=='__main__':main()
+
