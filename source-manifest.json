@@ -1,6 +1,6 @@
 {
   "source_origin": "https://longchuanwusheng.drtangjunlong.chatgpt.site",
-  "source_commit": "d6fa6dce00dd256d1b9fb9b6747ce381b3b41965",
+  "source_commit": "4b8e776e982bb855953097894f3fa5d4ae46bd1c",
   "target_url": "https://longlong-hub.github.io/longchuanwusheng",
   "base_path": "/longchuanwusheng",
   "files": [
@@ -67,7 +67,7 @@
     {
       "path": "articles/dermatology-06/index.html",
       "size": 65731,
-      "sha256": "2c3874375998458348ae9e47291bc91cba60e3d66f54f2e6d13ed93008eff156",
+      "sha256": "96c1bd36a10be4166dca5ac6ac11475e97f4617c43fdbe66f56c1e7e1e4a710f",
       "inline_file": "_source/site/articles/dermatology-06/index.html"
     },
     {
@@ -115,7 +115,7 @@
     {
       "path": "articles/index.html",
       "size": 37016,
-      "sha256": "3a14042512cb407f98afd981f7b1c4de0157d061b05729c3a531d927bf8234ac",
+      "sha256": "4ba4e534d6363143a3243706eb96af667563aeba0177d5e4a84da89e27179d1b",
       "inline_file": "_source/site/articles/index.html"
     },
     {
@@ -649,9 +649,10 @@
       "sha256": "d55d8c2552f3b2336442f3e5d1bdbe533bf966953e4ec32923f51d3e44aa5000"
     },
     {
-      "path": "assets/content/dermatology-06/image-d75f8b64016d88.png",
-      "size": 55962,
-      "sha256": "d75f8b64016d881498abf244206a8a389caf034452297aedf1aa940e907a534e"
+      "path": "assets/content/dermatology-06/image-f046edc6a2480b.png",
+      "size": 1449730,
+      "sha256": "f046edc6a2480bef6f0640b278aa568862a2993022f54b47d97ca1f546a6b435",
+      "inline_file": "_source/site/assets/content/dermatology-06/image-f046edc6a2480b.png"
     },
     {
       "path": "assets/content/dermatology-07/image-16d15d32fb3b73.jpg",
@@ -1361,13 +1362,13 @@
     {
       "path": "build-manifest.json",
       "size": 17817,
-      "sha256": "4f143669155646ca25f070befe5f3932e29d029936196de9b40519309cd511a6",
+      "sha256": "14949a3682c3e91b932f4e2a1e788a66447ed92cae6d56addf353541296babae",
       "inline_file": "_source/site/build-manifest.json"
     },
     {
       "path": "data/catalog.json",
       "size": 12989,
-      "sha256": "1d6951a07f519aa498524d972ca5892c4b6ced824dafebd8bdebe85e3b1b402f",
+      "sha256": "46d7b8cd244f8f5a1290f4915951b07fca1db0d7e211e90b0367f2e494c45fe5",
       "inline_file": "_source/site/data/catalog.json"
     },
     {
@@ -1385,7 +1386,7 @@
     {
       "path": "index.html",
       "size": 45464,
-      "sha256": "702c4cc275eb5919c921030377a13c88a67ae3c5ad67e37022f4508c874fad32",
+      "sha256": "79ab6da9b48d91cdeca6f7c6ad701db57be931ed2c837b902223253a5027b97e",
       "inline_file": "_source/site/index.html"
     },
     {
@@ -1445,13 +1446,13 @@
     {
       "path": "science/dermatovenereology/index.html",
       "size": 19768,
-      "sha256": "bc9a738a7212433e0a454688e839c6071beb8599d57439ccd49b9083be714219",
+      "sha256": "2d7c1eebb5b440d12a68b6ca289f831603065f19f174527fc5e8c52a967bb386",
       "inline_file": "_source/site/science/dermatovenereology/index.html"
     },
     {
       "path": "science/index.html",
       "size": 20157,
-      "sha256": "96c7aa82bac32bbcedcfcfeefcbea3def4111a086b47da43a409e4bf5eed86ff",
+      "sha256": "d8ebffc36769486ab6bd919345cf63432fcff31c76b00f496696b3c602e12067",
       "inline_file": "_source/site/science/index.html"
     },
     {
