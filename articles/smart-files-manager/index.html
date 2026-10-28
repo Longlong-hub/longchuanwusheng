@@ -1,0 +1,148 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Smart Files Manager：会商量、能反悔的 AI 文件整理助手 · 龙川武生｜诗与代码</title><meta name="description" content="一个零依赖、可回滚、守护隐私的 AI 文件整理 Skill——先审查、再协商、后落地，你来定边界，它来出方案。"><meta name="theme-color" content="#f4f4ed"><link rel="canonical" href="https://longlong-hub.github.io/longchuanwusheng/articles/smart-files-manager/"><meta property="og:type" content="article"><meta property="og:title" content="Smart Files Manager：会商量、能反悔的 AI 文件整理助手 · 龙川武生｜诗与代码"><meta property="og:description" content="一个零依赖、可回滚、守护隐私的 AI 文件整理 Skill——先审查、再协商、后落地，你来定边界，它来出方案。"><meta property="og:url" content="https://longlong-hub.github.io/longchuanwusheng/articles/smart-files-manager/"><meta property="og:image" content="https://longlong-hub.github.io/longchuanwusheng/assets/content/smart-files-manager/image-96b7f56bf308e5.png"><link rel="icon" type="image/svg+xml" href="/longchuanwusheng/assets/long-seal-v2.svg"><link rel="stylesheet" href="/longchuanwusheng/assets/style.css"><link rel="alternate" type="application/rss+xml" title="龙川武生的推文" href="/longchuanwusheng/feed.xml"><script src="/longchuanwusheng/assets/app.js" defer></script></head><body><a class="skip-link" href="#main">跳到正文</a><header class="site-header" id="top"><div class="container"><div class="header-row"><a class="brand" href="/longchuanwusheng/" aria-label="龙川武生 首页"><span class="brand-seal" aria-hidden="true">龍</span><span><span class="brand-name">龙川武生</span><br><span class="brand-sub">LONG-CHUAN-WU-SHENG</span></span></a><button class="menu-toggle" data-menu aria-expanded="false" aria-controls="siteNav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/longchuanwusheng/></svg>导航</button><nav class="nav" id="siteNav" aria-label="主要导航"><a href="/longchuanwusheng/">首页</a><a href="/longchuanwusheng/articles/" aria-current="page">推文</a><a href="/longchuanwusheng/poetry/">诗集</a><a href="/longchuanwusheng/science/">科普</a><a href="/longchuanwusheng/projects/">项目</a><a href="/longchuanwusheng/about/">关于</a><a class="nav-github" href="https://github.com/Longlong-hub" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav></div></div></header><div class="reading-progress" aria-hidden="true"></div><main id="main" class="container reader original-reader"><div class="reader-head"><a class="back-link" href="/longchuanwusheng/articles/">← 回到推文</a><div class="eyebrow" style="margin-top:22px;">AI 创意 </div><h1>Smart Files Manager：会商量、能反悔的 AI 文件整理助手</h1><div class="reader-meta"><span>文 / 龙川武生</span><span>原稿记录 2026-08-17</span><span>约 6 分钟</span></div></div><div class="reader-layout"><article class="reader-main"><div class="source-article"><section style="font-family:-apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Roboto, sans-serif; font-size:16px; line-height:1.8; color:#333333; padding:16px; text-align:left;">
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">你的「下载」文件夹是不是已经堆了三年？微信接收的文件散落在十几个角落，桌面图标密密麻麻，想整理一次，又怕删错重要资料、怕不小心动了隐私文件、怕整理到一半后悔莫及……</p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">今天介绍我自己写的一个开源小工具 / Skill：<b style="color:#6B5E54;">Smart Files Manager（智能文件整理助手）</b>。它不会替你莽撞地删除文件，而是先和你&quot;商量边界&quot;，再动手；所有落地动作默认只做<b style="color:#6B5E54;">复制</b>、并且能<b style="color:#6B5E54;">一键回滚</b>。</p>
+
+<p style="text-align:center; margin:1.5em 0;"><img style="max-width:100%; border-radius:4px; display:block; margin:20px auto; opacity:0.92;" src="/longchuanwusheng/assets/content/smart-files-manager/image-4c1a2b7b9f16bc.png" alt="插画：一个被杂乱无章的文件和文件夹淹没的电脑桌面，用户一脸无奈，扁平插画，柔和灰调" loading="lazy" decoding="async"></p>
+
+<h2 style="font-size:18px; font-weight:bold; color:#6B5E54; margin:2em 0 1em; padding-bottom:6px; border-bottom:3px double #C8BEB4;" id="section-1">一、它到底解决什么</h2>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">我们每个人都有&quot;文件焦虑&quot;：</p>
+
+<ul style="color:#5A5148; font-size:16px; line-height:1.85; letter-spacing:2px; padding-left:1.2em; margin:10px 0;">
+<li style="margin:6px 0;"><b style="color:#6B5E54;">乱</b>：下载、微信、桌面、各种临时目录，文件像野草一样疯长；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">怕</b>：想整理，又怕误删、怕覆盖、怕动了密码和密钥；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">烦</b>：大文件、缓存、媒体塞满硬盘，手动分类费时费力；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">悔</b>：整理完才发现分类不对，却已经改不动了。</li>
+</ul>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">市面上的整理工具大多&quot;一键梭哈&quot;——直接移动、删除、重命名，出错就难以挽回。Smart Files Manager 的设计哲学恰恰相反：<b style="color:#6B5E54;">先审查、再协商、后落地，且全程可反悔</b>。</p>
+
+<h2 style="font-size:18px; font-weight:bold; color:#6B5E54; margin:2em 0 1em; padding-bottom:6px; border-bottom:3px double #C8BEB4;" id="section-2">二、它是什么</h2>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">一句话：<b style="color:#6B5E54;">一个个性化 + 交互式 + 人工审核闭环的通用文件管理自动化工具</b>。</p>
+
+<ul style="color:#5A5148; font-size:16px; line-height:1.85; letter-spacing:2px; padding-left:1.2em; margin:10px 0;">
+<li style="margin:6px 0;">它<b style="color:#6B5E54;">不限于微信文件</b>——你可以一次性传入任意多个待整理目录，统一聚合扫描、出方案、做落地；</li>
+<li style="margin:6px 0;">它<b style="color:#6B5E54;">既是可独立运行的命令行工具</b>（纯 Python），也是 <b style="color:#6B5E54;">opencode / Claude Agent 的 Skill 包</b>——复制仓库目录加入技能路径即可；</li>
+<li style="margin:6px 0;">它<b style="color:#6B5E54;">零第三方依赖</b>，仅用 Python 标准库，<b style="color:#6B5E54;">Windows 下开箱即用</b>（自动处理 260 字符长路径）。</li>
+</ul>
+
+<h2 style="font-size:18px; font-weight:bold; color:#6B5E54; margin:2em 0 1em; padding-bottom:6px; border-bottom:3px double #C8BEB4;" id="section-3">三、核心特性：为什么敢放心交给它</h2>
+
+<ul style="color:#5A5148; font-size:16px; line-height:1.85; letter-spacing:2px; padding-left:1.2em; margin:10px 0;">
+<li style="margin:6px 0;"><b style="color:#6B5E54;">多目录输入</b> — 一次传入多个待整理目录，统一聚合扫描 / 方案 / 落地；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">隐私保护</b> — <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">.env</code>、<code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">*.pem/.key/.p12</code>、密码 / 密钥 / 凭据目录、<code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">.ssh</code>、Thumbs.db 等命中即跳过，整棵子树连清单都不枚举；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">性能敏感保护</b> — 超过 200MB、缓存目录、<code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">node_modules</code>、Git 内部、二进制 / 媒体 / 压缩包：只报告，不读取、不复制、不移动；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">边界与权限协商</b> — <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">analyze.py</code> 产出只读审查报告，动手前用 4 个问题与你确认；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">人工审核闭环</b> — <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">recommend.py</code> 生成方案 → 你逐条批准 → <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">apply.py</code> 才落地；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">智能去重</b> — 目标已存在：内容一致就跳过，不一致自动加 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">_1</code> 序号保留全部版本；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">可回滚</b> — 每次落地写操作日志，<code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">--undo</code> 一键反向；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">持续学习</b> — 从已有仓库学分类 / 命名；反馈写入 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">habits.md</code>，下次自动遵守；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">零第三方依赖</b> — 仅 Python 标准库，Windows 下开箱即用。</li>
+</ul>
+
+<p style="text-align:center; margin:1.5em 0;"><img style="max-width:100%; border-radius:4px; display:block; margin:20px auto; opacity:0.92;" src="/longchuanwusheng/assets/content/smart-files-manager/image-bdea2c5e58369c.png" alt="插画：AI 机器人助手将文件按类别拖入对应文件夹，旁边有盾牌（隐私）和回退箭头（撤销）图标，蓝绿科技色，扁平风" loading="lazy" decoding="async"></p>
+
+<h2 style="font-size:18px; font-weight:bold; color:#6B5E54; margin:2em 0 1em; padding-bottom:6px; border-bottom:3px double #C8BEB4;" id="section-4">四、怎么装</h2>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">方式一：当命令行工具用</b></p>
+
+<p style="margin:1em 0;"><section style="background:#f5f2ee; border-left:4px solid #C8BEB4; border-radius:4px; padding:12px 14px; font-family:Consolas,&#x27;Courier New&#x27;,monospace; font-size:13px; line-height:1.7; color:#4a4038; white-space:pre-wrap; word-break:break-all;"># 1. 检查 Python 版本（需 3.8+）
+python --version
+
+# 2. 克隆仓库
+git clone https://github.com/Longlong-hub/smart-files-manager.git
+cd smart-files-manager</section></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">方式二：当 AI Agent 的 Skill 用</b></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">把仓库目录复制到你 Agent 的技能路径下即可（例如 opencode / Claude Agent 的 skills 目录）。具体路径见仓库 README 的「Skill 路径」说明。</p>
+
+<h2 style="font-size:18px; font-weight:bold; color:#6B5E54; margin:2em 0 1em; padding-bottom:6px; border-bottom:3px double #C8BEB4;" id="section-5">五、四步上手（Quick Start）</h2>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">第 1 步：边界与权限审查（只读，不碰任何文件）</b></p>
+
+<p style="margin:1em 0;"><section style="background:#f5f2ee; border-left:4px solid #C8BEB4; border-radius:4px; padding:12px 14px; font-family:Consolas,&#x27;Courier New&#x27;,monospace; font-size:13px; line-height:1.7; color:#4a4038; white-space:pre-wrap; word-break:break-all;">python scripts/analyze.py &quot;D:\杂乱文件A&quot; &quot;D:\杂乱文件B&quot;</section></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">你会看到一份审查报告：整理候选 / 隐私跳过 / 性能跳过 / 待确认问题清单。<b style="color:#6B5E54;">先逐条确认规则，再进入下一步。</b></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">第 2 步：扫描并生成方案</b></p>
+
+<p style="margin:1em 0;"><section style="background:#f5f2ee; border-left:4px solid #C8BEB4; border-radius:4px; padding:12px 14px; font-family:Consolas,&#x27;Courier New&#x27;,monospace; font-size:13px; line-height:1.7; color:#4a4038; white-space:pre-wrap; word-break:break-all;"># 扫描（候选清单 + 画像推断）
+python scripts/scan.py &quot;D:\杂乱文件A&quot; &quot;D:\杂乱文件B&quot; --out state/scan_report.md
+
+# 生成分类+命名方案（写入 state/pending_plan.md）
+python scripts/recommend.py &quot;D:\杂乱文件A&quot; &quot;D:\杂乱文件B&quot;
+
+# 预览方案
+python scripts/review.py state/pending_plan.md</section></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">第 3 步：人工审核后落地</b></p>
+
+<p style="margin:1em 0;"><section style="background:#f5f2ee; border-left:4px solid #C8BEB4; border-radius:4px; padding:12px 14px; font-family:Consolas,&#x27;Courier New&#x27;,monospace; font-size:13px; line-height:1.7; color:#4a4038; white-space:pre-wrap; word-break:break-all;"># 默认复制，目标根目录 D:\文件整理（也可用 --dst 指定）
+python scripts/apply.py state/pending_plan.md --dst &quot;D:\文件整理&quot;
+
+# 出错了？一键回滚
+python scripts/apply.py --undo &quot;state\logs\apply_20260807_120501.json&quot;</section></p>
+
+<p style="margin:1em 0; padding:12px 14px; background:#fbeee6; border-left:4px solid #d98c5f; border-radius:4px; font-size:15px; line-height:1.8; color:#7a4a2e;"><b>⚠️ 红线</b>：任何写 / 删 / 移动操作，必须先产出方案并经过你批准。默认只做<b>复制</b>，移动必须你明确要求。</p>
+
+<h2 style="font-size:18px; font-weight:bold; color:#6B5E54; margin:2em 0 1em; padding-bottom:6px; border-bottom:3px double #C8BEB4;" id="section-6">六、一处配置，改边界不改代码</h2>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">所有边界都在 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">config/rules.json</code> 一处维护，改配置不用动代码：</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1em 0; font-size:13px; line-height:1.6; color:#5A5148;">
+<thead>
+<tr style="background:#6B5E54; color:#fff;">
+<th style="border:1px solid #C8BEB4; padding:8px 6px; text-align:left; font-weight:bold;">字段</th>
+<th style="border:1px solid #C8BEB4; padding:8px 6px; text-align:left; font-weight:bold;">作用</th>
+<th style="border:1px solid #C8BEB4; padding:8px 6px; text-align:left; font-weight:bold;">默认示例</th>
+</tr>
+</thead>
+<tbody>
+<tr><td style="border:1px solid #C8BEB4; padding:8px 6px;">文档后缀</td><td style="border:1px solid #C8BEB4; padding:8px 6px;">哪些扩展名算&quot;待整理候选&quot;</td><td style="border:1px solid #C8BEB4; padding:8px 6px;"><code style="font-size:12px;">.doc .docx .pdf .xlsx .md .png …</code></td></tr>
+<tr style="background:#faf8f5;"><td style="border:1px solid #C8BEB4; padding:8px 6px;">隐私跳过.文件名</td><td style="border:1px solid #C8BEB4; padding:8px 6px;">命中即跳过的文件名（<code style="font-size:12px;">*</code> 通配）</td><td style="border:1px solid #C8BEB4; padding:8px 6px;"><code style="font-size:12px;">*password*</code>、<code style="font-size:12px;">*.pem</code>、<code style="font-size:12px;">.env</code></td></tr>
+<tr><td style="border:1px solid #C8BEB4; padding:8px 6px;">隐私跳过.目录</td><td style="border:1px solid #C8BEB4; padding:8px 6px;">命中即跳过的目录</td><td style="border:1px solid #C8BEB4; padding:8px 6px;"><code style="font-size:12px;">/.ssh/</code>、<code style="font-size:12px;">AppData</code>、<code style="font-size:12px;">/凭据/</code></td></tr>
+<tr style="background:#faf8f5;"><td style="border:1px solid #C8BEB4; padding:8px 6px;">性能敏感.最小跳过MB</td><td style="border:1px solid #C8BEB4; padding:8px 6px;">超过该大小的文件跳过</td><td style="border:1px solid #C8BEB4; padding:8px 6px;"><code style="font-size:12px;">200</code></td></tr>
+<tr><td style="border:1px solid #C8BEB4; padding:8px 6px;">性能敏感.目录</td><td style="border:1px solid #C8BEB4; padding:8px 6px;">缓存 / 依赖 / 临时目录</td><td style="border:1px solid #C8BEB4; padding:8px 6px;"><code style="font-size:12px;">node_modules</code>、<code style="font-size:12px;">.git</code>、<code style="font-size:12px;">cache</code>、<code style="font-size:12px;">temp</code></td></tr>
+<tr style="background:#faf8f5;"><td style="border:1px solid #C8BEB4; padding:8px 6px;">性能敏感.后缀</td><td style="border:1px solid #C8BEB4; padding:8px 6px;">二进制 / 媒体 / 归档扩展名</td><td style="border:1px solid #C8BEB4; padding:8px 6px;"><code style="font-size:12px;">.exe .dll .mp4 .zip .sqlite …</code></td></tr>
+<tr><td style="border:1px solid #C8BEB4; padding:8px 6px;">跳过不整理</td><td style="border:1px solid #C8BEB4; padding:8px 6px;">无条件跳过</td><td style="border:1px solid #C8BEB4; padding:8px 6px;"><code style="font-size:12px;">.idea</code>、<code style="font-size:12px;">.vscode</code>、<code style="font-size:12px;">*.bak</code></td></tr>
+<tr style="background:#faf8f5;"><td style="border:1px solid #C8BEB4; padding:8px 6px;">整理后目的根</td><td style="border:1px solid #C8BEB4; padding:8px 6px;">落地目标根（apply 默认 <code style="font-size:12px;">--dst</code>）</td><td style="border:1px solid #C8BEB4; padding:8px 6px;"><code style="font-size:12px;">E:\文件整理</code></td></tr>
+</tbody>
+</table>
+
+<h2 style="font-size:18px; font-weight:bold; color:#6B5E54; margin:2em 0 1em; padding-bottom:6px; border-bottom:3px double #C8BEB4;" id="section-7">七、动手前必问的 4 件事</h2>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">在跑扫描 / 落地之前，<code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">analyze.py</code> 会引导你和它确认这 4 个问题：</p>
+
+<ul style="color:#5A5148; font-size:16px; line-height:1.85; letter-spacing:2px; padding-left:1.2em; margin:10px 0;">
+<li style="margin:6px 0;"><b style="color:#6B5E54;">隐私跳过规则</b>是否符合预期？（可增删 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">config/rules.json</code> 条目）</li>
+<li style="margin:6px 0;">动作是<b style="color:#6B5E54;">复制</b>（保留原件）还是<b style="color:#6B5E54;">移动</b>？</li>
+<li style="margin:6px 0;">同名文件冲突处理：跳过 / 自动加序号 / 询问？</li>
+<li style="margin:6px 0;">是否允许读取文件<b style="color:#6B5E54;">内容</b>做智能分类 / 去重？（隐私与性能文件除外）</li>
+</ul>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">边界讨论完成前，工具不会进入扫描 / 落地阶段。</p>
+
+<h2 style="font-size:18px; font-weight:bold; color:#6B5E54; margin:2em 0 1em; padding-bottom:6px; border-bottom:3px double #C8BEB4;" id="section-8">八、你可能关心的问题（FAQ）</h2>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">Q：能整理微信 / QQ 的接收文件夹吗？</b><br>可以。微信 / QQ / 任意目录都只是&quot;待整理目录&quot;，直接传给 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">analyze.py</code> / <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">scan.py</code> 即可。</p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">Q：会读到我的隐私内容吗？</b><br>默认不会。隐私文件匹配后就被整棵跳过，连清单都不枚举；<code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">analyze.py</code> 报告会明确列出哪些目录被整棵跳过。</p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">Q：支持哪些平台？</b><br>Windows / macOS / Linux 均可。Windows 下自动用 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">\\?\</code> 长路径前缀，超过 260 字符的路径不受影响。</p>
+
+<h2 style="font-size:18px; font-weight:bold; color:#6B5E54; margin:2em 0 1em; padding-bottom:6px; border-bottom:3px double #C8BEB4;" id="section-9">写在最后</h2>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">文件整理从来不是&quot;删得多&quot;就好，而是&quot;整理得安心&quot;才重要。Smart Files Manager 把这件事交还给你：<b style="color:#6B5E54;">你来定边界，它来出方案，你有最终否决权，而且随时能反悔。</b></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">项目已开源，采用 <b style="color:#6B5E54;">MIT 许可</b>，欢迎 Star / Fork / 提 Issue：</p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:1px;"><b style="color:#6B5E54;">🔗 https://github.com/Longlong-hub/smart-files-manager</b></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">不妨向其他人转发分享一下~</p>
+
+</section>
+</div><div class="reader-foot"><a class="text-link" href="/longchuanwusheng/articles/">← 继续读点别的</a></div></article><aside class="reader-aside" aria-label="本文目录"><details open><summary>这一篇 · 阅读目录</summary><ol class="toc"><li><a href="#section-1">一、它到底解决什么</a></li><li><a href="#section-2">二、它是什么</a></li><li><a href="#section-3">三、核心特性：为什么敢放心交给它</a></li><li><a href="#section-4">四、怎么装</a></li><li><a href="#section-5">五、四步上手（Quick Start）</a></li><li><a href="#section-6">六、一处配置，改边界不改代码</a></li><li><a href="#section-7">七、动手前必问的 4 件事</a></li><li><a href="#section-8">八、你可能关心的问题（FAQ）</a></li><li><a href="#section-9">写在最后</a></li></ol></details></aside></div></main><footer class="site-footer"><div class="container footer-row"><div><div class="footer-mark">不失赤子之心，不坠青云之志。</div><div class="footer-signature">龙川武生 · 心有所向，诗有所往。</div></div><div class="footer-links"><a href="/longchuanwusheng/about/">关于这里</a><a href="/longchuanwusheng/about/#wechat">微信公众号</a><a href="https://github.com/Longlong-hub" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="/longchuanwusheng/feed.xml">RSS</a></div></div></footer><a href="#top" class="back-top" aria-label="回到顶部" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 13 6-6 6 6M12 7v13"/longchuanwusheng/></svg></a></body></html>

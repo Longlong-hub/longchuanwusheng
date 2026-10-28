@@ -1,0 +1,149 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>我的 AI 工作流实战：从科研、学习到办公 · 龙川武生｜诗与代码</title><meta name="description" content="分享我跑通的三套 AI 工作流：科研（Obsidian+Zotero+Agent）、学习（Karpathy LLM+Syncthing 同步）、办公（飞书 CLI+Workbuddy 替代机器人），让 Agent 承担执行，你专注判断。"><meta name="theme-color" content="#f4f4ed"><link rel="canonical" href="https://longlong-hub.github.io/longchuanwusheng/articles/ai-workflow/"><meta property="og:type" content="article"><meta property="og:title" content="我的 AI 工作流实战：从科研、学习到办公 · 龙川武生｜诗与代码"><meta property="og:description" content="分享我跑通的三套 AI 工作流：科研（Obsidian+Zotero+Agent）、学习（Karpathy LLM+Syncthing 同步）、办公（飞书 CLI+Workbuddy 替代机器人），让 Agent 承担执行，你专注判断。"><meta property="og:url" content="https://longlong-hub.github.io/longchuanwusheng/articles/ai-workflow/"><meta property="og:image" content="https://longlong-hub.github.io/longchuanwusheng/assets/content/ai-workflow/image-da2373d971faa6.png"><link rel="icon" type="image/svg+xml" href="/longchuanwusheng/assets/long-seal-v2.svg"><link rel="stylesheet" href="/longchuanwusheng/assets/style.css"><link rel="alternate" type="application/rss+xml" title="龙川武生的推文" href="/longchuanwusheng/feed.xml"><script src="/longchuanwusheng/assets/app.js" defer></script></head><body><a class="skip-link" href="#main">跳到正文</a><header class="site-header" id="top"><div class="container"><div class="header-row"><a class="brand" href="/longchuanwusheng/" aria-label="龙川武生 首页"><span class="brand-seal" aria-hidden="true">龍</span><span><span class="brand-name">龙川武生</span><br><span class="brand-sub">LONG-CHUAN-WU-SHENG</span></span></a><button class="menu-toggle" data-menu aria-expanded="false" aria-controls="siteNav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/longchuanwusheng/></svg>导航</button><nav class="nav" id="siteNav" aria-label="主要导航"><a href="/longchuanwusheng/">首页</a><a href="/longchuanwusheng/articles/" aria-current="page">推文</a><a href="/longchuanwusheng/poetry/">诗集</a><a href="/longchuanwusheng/science/">科普</a><a href="/longchuanwusheng/projects/">项目</a><a href="/longchuanwusheng/about/">关于</a><a class="nav-github" href="https://github.com/Longlong-hub" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav></div></div></header><div class="reading-progress" aria-hidden="true"></div><main id="main" class="container reader original-reader"><div class="reader-head"><a class="back-link" href="/longchuanwusheng/articles/">← 回到推文</a><div class="eyebrow" style="margin-top:22px;">AI 创意 </div><h1>我的 AI 工作流实战：从科研、学习到办公</h1><div class="reader-meta"><span>文 / 龙川武生</span><span>原稿记录 2026-08-21</span><span>约 4 分钟</span></div></div><div class="reader-layout"><article class="reader-main"><div class="source-article"><section style="font-family:-apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Roboto, sans-serif; font-size:16px; line-height:1.8; color:#333333; padding:16px; text-align:left;">
+
+<p style="font-size:20px; font-weight:bold; color:#6B5E54; text-align:center; letter-spacing:2px; margin:0.5em 0 0.2em;" id="section-1">我的 AI 工作流实战</p>
+<p style="font-size:14px; color:#C8BEB4; text-align:center; letter-spacing:3px; margin:0 0 1.5em;">从科研、学习到办公，用 Agent 把效率串成链</p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">过去一年，我逐渐把 AI 从&quot;聊天工具&quot;变成了真正的&quot;执行助手&quot;。</p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">这篇文章不是工具评测，而是三套我已经跑通的工作流：<b style="color:#6B5E54;">科研、学习、办公</b>。核心思路只有一个——<b style="color:#6B5E54;">让 Agent 做重复性执行，我专注于判断和创造</b>。</p>
+
+<h2 style="font-size:18px; font-weight:bold; color:#6B5E54; margin:2em 0 1em; padding-bottom:6px; border-bottom:3px double #C8BEB4;" id="section-2">一、先厘清两个概念</h2>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">1. Agent：不只是会聊天的 AI</b></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">传统聊天机器人是&quot;你问一句，它答一句&quot;。Agent（智能体）则能自己规划、调用工具、反复尝试，直到把任务做完。它的典型循环是：接收目标 → 思考规划 → 调用工具 → 观察结果 → 交付结果；未完成则继续循环。</p>
+
+<p style="text-align:center; margin:1.5em 0;"><img style="max-width:100%; border-radius:4px; display:block; margin:20px auto; opacity:0.92;" src="/longchuanwusheng/assets/content/ai-workflow/image-035137a695121c.png" alt="Agent 概念图：从接收目标到思考规划、调用工具、观察结果、交付结果的自主循环" loading="lazy" decoding="async"></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">一句话总结：Agent = LLM 大脑 + 记忆 + 工具 + 自主循环。</b></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">2. 工作流：把工具串成链</b></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">工作流（Workflow）是把一系列任务按固定或半固定顺序连接起来的流程。当 Agent 嵌入工作流，原本需要手动操作多个软件的环节，可以自动流转。工作流的本质不是&quot;用得越多越好&quot;，而是<b style="color:#6B5E54;">让每个工具在自己擅长的环节发挥作用，减少切换和重复劳动</b>。</p>
+
+<p style="margin:1em 0; padding:12px 14px; background:#fbeee6; border-left:4px solid #d98c5f; border-radius:4px; font-size:15px; line-height:1.8; color:#7a4a2e;">核心理念：让 Agent 做执行，你做决策。</p>
+
+<h2 style="font-size:18px; font-weight:bold; color:#6B5E54; margin:2em 0 1em; padding-bottom:6px; border-bottom:3px double #C8BEB4;" id="section-3">二、科研工作流</h2>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">核心痛点：</b>文献管理混乱、笔记分散、引用格式繁琐、写文章时反复切换窗口。</p>
+
+<p style="text-align:center; margin:1.5em 0;"><img style="max-width:100%; border-radius:4px; display:block; margin:20px auto; opacity:0.92;" src="/longchuanwusheng/assets/content/ai-workflow/image-20c2ce5c2c234e.png" alt="科研工作流：Zotero 经 llm-for-zotero 提取要点，进入 Obsidian，由 obsidian-vault-mcp 让 Agent 读写，最终产出综述与论文，配合 drawio / excalidraw / nano banana 绘图" loading="lazy" decoding="async"></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">我的工具栈：</b></p>
+
+<table style="width:100%; border-collapse:collapse; margin:1em 0; font-size:13px; line-height:1.6; color:#5A5148;">
+<thead>
+<tr style="background:#6B5E54; color:#fff;">
+<th style="border:1px solid #C8BEB4; padding:8px 6px; text-align:left; font-weight:bold;">工具</th>
+<th style="border:1px solid #C8BEB4; padding:8px 6px; text-align:left; font-weight:bold;">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr><td style="border:1px solid #C8BEB4; padding:8px 6px;">Zotero</td><td style="border:1px solid #C8BEB4; padding:8px 6px;">文献管理与 PDF 阅读</td></tr>
+<tr style="background:#faf8f5;"><td style="border:1px solid #C8BEB4; padding:8px 6px;">llm-for-zotero</td><td style="border:1px solid #C8BEB4; padding:8px 6px;">在 Zotero 里直接调用 AI 总结论文</td></tr>
+<tr><td style="border:1px solid #C8BEB4; padding:8px 6px;">Obsidian</td><td style="border:1px solid #C8BEB4; padding:8px 6px;">个人知识库，双向链接</td></tr>
+<tr style="background:#faf8f5;"><td style="border:1px solid #C8BEB4; padding:8px 6px;">obsidian-vault-mcp</td><td style="border:1px solid #C8BEB4; padding:8px 6px;">让 Agent 通过 MCP 读写 Obsidian 笔记</td></tr>
+<tr><td style="border:1px solid #C8BEB4; padding:8px 6px;">drawio / excalidraw</td><td style="border:1px solid #C8BEB4; padding:8px 6px;">画概念图、流程图</td></tr>
+<tr style="background:#faf8f5;"><td style="border:1px solid #C8BEB4; padding:8px 6px;">nano banana</td><td style="border:1px solid #C8BEB4; padding:8px 6px;">科研数据可视化</td></tr>
+</tbody>
+</table>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">推荐安装：</b></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">1. <b style="color:#6B5E54;">llm-for-zotero</b>（<a style="color:#6B5E54; text-decoration:none;" href="https://github.com/yilewang/llm-for-zotero" target="_blank" rel="noopener noreferrer">github.com/yilewang/llm-for-zotero</a>）：在 Zotero 中直接调用 AI，快速提取摘要、方法、实验结果。</p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">2. <b style="color:#6B5E54;">obsidian-vault-mcp</b>（<a style="color:#6B5E54; text-decoration:none;" href="https://github.com/luffysolution-svg/obsidian-vault-mcp" target="_blank" rel="noopener noreferrer">github.com/luffysolution-svg/obsidian-vault-mcp</a>）：让 Agent 真正操作本地知识库，实现读写笔记、关联知识。</p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">关键收益：</b>文献不再沉睡，笔记自动生长，输出更连贯。</p>
+
+<h2 style="font-size:18px; font-weight:bold; color:#6B5E54; margin:2em 0 1em; padding-bottom:6px; border-bottom:3px double #C8BEB4;" id="section-4">三、学习工作流</h2>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">核心思路：</b>学习的关键不是&quot;存了多少资料&quot;，而是知识有没有经过自己的处理。流程是：输入 → 处理 → 输出 → 复习，形成闭环。</p>
+
+<p style="text-align:center; margin:1.5em 0;"><img style="max-width:100%; border-radius:4px; display:block; margin:20px auto; opacity:0.92;" src="/longchuanwusheng/assets/content/ai-workflow/image-e62d677e00975b.png" alt="学习工作流：阅读听课进入 Obsidian，经插件整理与 AI 处理，输出笔记思维导图，Syncthing 同步平板复习，Ink 手写批注后回同步" loading="lazy" decoding="async"></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">我的工具栈：</b></p>
+
+<table style="width:100%; border-collapse:collapse; margin:1em 0; font-size:13px; line-height:1.6; color:#5A5148;">
+<thead>
+<tr style="background:#6B5E54; color:#fff;">
+<th style="border:1px solid #C8BEB4; padding:8px 6px; text-align:left; font-weight:bold;">工具</th>
+<th style="border:1px solid #C8BEB4; padding:8px 6px; text-align:left; font-weight:bold;">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr><td style="border:1px solid #C8BEB4; padding:8px 6px;">Obsidian</td><td style="border:1px solid #C8BEB4; padding:8px 6px;">知识库主阵地</td></tr>
+<tr style="background:#faf8f5;"><td style="border:1px solid #C8BEB4; padding:8px 6px;">日历 / 看板 / 模板 / Dataview</td><td style="border:1px solid #C8BEB4; padding:8px 6px;">让笔记结构化、可查询</td></tr>
+<tr><td style="border:1px solid #C8BEB4; padding:8px 6px;">karpathy-llm-wiki-vault</td><td style="border:1px solid #C8BEB4; padding:8px 6px;">基于 Karpathy 教程的 LLM 知识库</td></tr>
+<tr style="background:#faf8f5;"><td style="border:1px solid #C8BEB4; padding:8px 6px;">Syncthing</td><td style="border:1px solid #C8BEB4; padding:8px 6px;">PC 与平板间零延迟同步</td></tr>
+<tr><td style="border:1px solid #C8BEB4; padding:8px 6px;">Ink / Mobile Ink Annotation</td><td style="border:1px solid #C8BEB4; padding:8px 6px;">平板手写批注，保留纸笔体验</td></tr>
+</tbody>
+</table>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">推荐资源：</b></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">• <b style="color:#6B5E54;">karpathy-llm-wiki-vault</b>（<a style="color:#6B5E54; text-decoration:none;" href="https://github.com/jason-effi-lab/karpathy-llm-wiki-vault" target="_blank" rel="noopener noreferrer">github.com/jason-effi-lab/karpathy-llm-wiki-vault</a>）：把 Karpathy 的 LLM 课程整理成可学习的 Obsidian 知识库。</p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">• <b style="color:#6B5E54;">Syncthing</b>：点对点同步，不依赖云盘，适合多设备同步 Obsidian 库。</p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">• <b style="color:#6B5E54;">Ink / Mobile Ink Annotation</b>：平板端手写批注，适合公式推导和草图记录。</p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">关键收益：</b>笔记即学习过程，跨设备无缝，复习有抓手。</p>
+
+<h2 style="font-size:18px; font-weight:bold; color:#6B5E54; margin:2em 0 1em; padding-bottom:6px; border-bottom:3px double #C8BEB4;" id="section-5">四、办公工作流</h2>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">核心痛点：</b>信息散落在聊天、文档、审批、多维表格里，手动复制粘贴、发通知、整理会议纪要的重复劳动多。</p>
+
+<p style="text-align:center; margin:1.5em 0;"><img style="max-width:100%; border-radius:4px; display:block; margin:20px auto; opacity:0.92;" src="/longchuanwusheng/assets/content/ai-workflow/image-ab30f507364da3.png" alt="办公工作流：Agent 与飞书 CLI、Workbuddy 协作，统一操作云文档、多维表格、消息群聊、任务审批" loading="lazy" decoding="async"></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">我的工具栈：</b></p>
+
+<table style="width:100%; border-collapse:collapse; margin:1em 0; font-size:13px; line-height:1.6; color:#5A5148;">
+<thead>
+<tr style="background:#6B5E54; color:#fff;">
+<th style="border:1px solid #C8BEB4; padding:8px 6px; text-align:left; font-weight:bold;">工具</th>
+<th style="border:1px solid #C8BEB4; padding:8px 6px; text-align:left; font-weight:bold;">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr><td style="border:1px solid #C8BEB4; padding:8px 6px;">飞书 CLI</td><td style="border:1px solid #C8BEB4; padding:8px 6px;">命令行操作飞书，批量处理文档、表格、消息</td></tr>
+<tr style="background:#faf8f5;"><td style="border:1px solid #C8BEB4; padding:8px 6px;">Workbuddy</td><td style="border:1px solid #C8BEB4; padding:8px 6px;">飞书生态内的 AI 助手，替代传统飞书机器人</td></tr>
+<tr><td style="border:1px solid #C8BEB4; padding:8px 6px;">Agent</td><td style="border:1px solid #C8BEB4; padding:8px 6px;">编排任务、调用飞书 API、读写文档与表格</td></tr>
+</tbody>
+</table>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">典型场景：</b></p>
+
+<ul style="color:#5A5148; font-size:16px; line-height:1.85; letter-spacing:2px; padding-left:1.2em; margin:10px 0;">
+<li style="margin:6px 0;"><b style="color:#6B5E54;">每日站会摘要</b>：Agent 读取日程和待办，自动生成摘要，通过飞书 CLI 发送到群聊；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">文档管理</b>：Agent 定期扫描云文档，自动归档过期会议纪要和临时文件；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">多维表格自动化</b>：任务状态变更后，Agent 自动更新多维表格并生成周报；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">替代传统飞书机器人</b>：飞书原生的机器人能力有限、配置复杂；Workbuddy + Agent 可根据自然语言指令灵活执行，实现文档、表格、消息、审批的集中管理。</li>
+</ul>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">关键收益：</b>协作信息自动流转，自然语言即可操作，可替代传统机器人。</p>
+
+<h2 style="font-size:18px; font-weight:bold; color:#6B5E54; margin:2em 0 1em; padding-bottom:6px; border-bottom:3px double #C8BEB4;" id="section-6">五、总结</h2>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">三套工作流的核心不是用了多少工具，而是<b style="color:#6B5E54;">让信息在正确的环节自动流动</b>。</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1em 0; font-size:13px; line-height:1.6; color:#5A5148;">
+<thead>
+<tr style="background:#6B5E54; color:#fff;">
+<th style="border:1px solid #C8BEB4; padding:8px 6px; text-align:left; font-weight:bold;">场景</th>
+<th style="border:1px solid #C8BEB4; padding:8px 6px; text-align:left; font-weight:bold;">核心链条</th>
+</tr>
+</thead>
+<tbody>
+<tr><td style="border:1px solid #C8BEB4; padding:8px 6px;">科研</td><td style="border:1px solid #C8BEB4; padding:8px 6px;">Zotero → Obsidian → Agent → 综述 / 论文</td></tr>
+<tr style="background:#faf8f5;"><td style="border:1px solid #C8BEB4; padding:8px 6px;">学习</td><td style="border:1px solid #C8BEB4; padding:8px 6px;">输入 → Obsidian 处理 → 输出 → Syncthing 同步 → 复习</td></tr>
+<tr><td style="border:1px solid #C8BEB4; padding:8px 6px;">办公</td><td style="border:1px solid #C8BEB4; padding:8px 6px;">飞书 CLI + Agent / Workbuddy → 文档 / 表格 / 消息 / 审批</td></tr>
+</tbody>
+</table>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">如果你刚开始搭建自己的工作流，建议先选一个最痛的场景跑通，再逐步扩展。不要追求一步到位，<b style="color:#6B5E54;">先让工具链转起来，再迭代优化</b>。</p>
+
+<p style="margin:1em 0; padding:12px 14px; background:#fbeee6; border-left:4px solid #d98c5f; border-radius:4px; font-size:15px; line-height:1.8; color:#7a4a2e;">工具是手段，效率是目的。Agent 负责执行，你负责思考。</p>
+
+</section>
+</div><div class="reader-foot"><a class="text-link" href="/longchuanwusheng/articles/">← 继续读点别的</a></div></article><aside class="reader-aside" aria-label="本文目录"><details open><summary>这一篇 · 阅读目录</summary><ol class="toc"><li><a href="#section-1">我的 AI 工作流实战</a></li><li><a href="#section-2">一、先厘清两个概念</a></li><li><a href="#section-3">二、科研工作流</a></li><li><a href="#section-4">三、学习工作流</a></li><li><a href="#section-5">四、办公工作流</a></li><li><a href="#section-6">五、总结</a></li></ol></details></aside></div></main><footer class="site-footer"><div class="container footer-row"><div><div class="footer-mark">不失赤子之心，不坠青云之志。</div><div class="footer-signature">龙川武生 · 心有所向，诗有所往。</div></div><div class="footer-links"><a href="/longchuanwusheng/about/">关于这里</a><a href="/longchuanwusheng/about/#wechat">微信公众号</a><a href="https://github.com/Longlong-hub" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="/longchuanwusheng/feed.xml">RSS</a></div></div></footer><a href="#top" class="back-top" aria-label="回到顶部" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 13 6-6 6 6M12 7v13"/longchuanwusheng/></svg></a></body></html>
