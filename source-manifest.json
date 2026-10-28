@@ -7,147 +7,176 @@
     {
       "path": "404.html",
       "size": 3255,
-      "sha256": "aa86c5425eeedfc0a5f9825109ff6e715e6c566c4b134c76bcbe824756461888"
+      "sha256": "aa86c5425eeedfc0a5f9825109ff6e715e6c566c4b134c76bcbe824756461888",
+      "inline_file": "_source/site/404.html"
     },
     {
       "path": "about/index.html",
       "size": 6100,
-      "sha256": "8e00aae211e12b6e6b00b36e4f0687b025e9f5bc7c1f2bf7c6b7bc676f4844d7"
+      "sha256": "8e00aae211e12b6e6b00b36e4f0687b025e9f5bc7c1f2bf7c6b7bc676f4844d7",
+      "inline_file": "_source/site/about/index.html"
     },
     {
       "path": "articles/ai-ecosystem/index.html",
       "size": 36438,
-      "sha256": "cff83750e46987e9ad6886d39125fb5900c18daf160281685b24614db0bb0578"
+      "sha256": "cff83750e46987e9ad6886d39125fb5900c18daf160281685b24614db0bb0578",
+      "inline_file": "_source/site/articles/ai-ecosystem/index.html"
     },
     {
       "path": "articles/ai-workflow/index.html",
       "size": 20332,
-      "sha256": "0bff1390b23b0e8c575ad1524bc677048100a0cde47f9661767a47e761ffe776"
+      "sha256": "0bff1390b23b0e8c575ad1524bc677048100a0cde47f9661767a47e761ffe776",
+      "inline_file": "_source/site/articles/ai-workflow/index.html"
     },
     {
       "path": "articles/at-least-you/index.html",
       "size": 38072,
-      "sha256": "4c13c10a1e97e80e5f274aaef5cc61f9f5c257d24c9404bc3cf06b86e173592a"
+      "sha256": "4c13c10a1e97e80e5f274aaef5cc61f9f5c257d24c9404bc3cf06b86e173592a",
+      "inline_file": "_source/site/articles/at-least-you/index.html"
     },
     {
       "path": "articles/dermatology-01/index.html",
       "size": 63913,
-      "sha256": "ad44a73e2e4c55422eeaf4afd984517f871cf8ea356494adbe32306b016c7669"
+      "sha256": "ad44a73e2e4c55422eeaf4afd984517f871cf8ea356494adbe32306b016c7669",
+      "inline_file": "_source/site/articles/dermatology-01/index.html"
     },
     {
       "path": "articles/dermatology-02/index.html",
       "size": 129773,
-      "sha256": "38e3214237be1c4227f59351184ace16486b706c627524c8c1dab35b69d6152e"
+      "sha256": "38e3214237be1c4227f59351184ace16486b706c627524c8c1dab35b69d6152e",
+      "inline_file": "_source/site/articles/dermatology-02/index.html"
     },
     {
       "path": "articles/dermatology-03/index.html",
       "size": 68404,
-      "sha256": "255061cc24cecdc91023d2f30d7176f997b77c33bf4183428618e50720e95e24"
+      "sha256": "255061cc24cecdc91023d2f30d7176f997b77c33bf4183428618e50720e95e24",
+      "inline_file": "_source/site/articles/dermatology-03/index.html"
     },
     {
       "path": "articles/dermatology-04/index.html",
       "size": 77800,
-      "sha256": "7af6f31b5c70791138cd8e3fead911dd2f21a0a441c1406394c14bf20f80961f"
+      "sha256": "7af6f31b5c70791138cd8e3fead911dd2f21a0a441c1406394c14bf20f80961f",
+      "inline_file": "_source/site/articles/dermatology-04/index.html"
     },
     {
       "path": "articles/dermatology-05/index.html",
       "size": 67386,
-      "sha256": "214d10b41eabc544290efbb851e7bd7e3067788ec733ad518964d73ee1bbc4e8"
+      "sha256": "214d10b41eabc544290efbb851e7bd7e3067788ec733ad518964d73ee1bbc4e8",
+      "inline_file": "_source/site/articles/dermatology-05/index.html"
     },
     {
       "path": "articles/dermatology-06/index.html",
       "size": 65731,
-      "sha256": "2c3874375998458348ae9e47291bc91cba60e3d66f54f2e6d13ed93008eff156"
+      "sha256": "2c3874375998458348ae9e47291bc91cba60e3d66f54f2e6d13ed93008eff156",
+      "inline_file": "_source/site/articles/dermatology-06/index.html"
     },
     {
       "path": "articles/dermatology-07/index.html",
       "size": 87342,
-      "sha256": "f45e44eecc5aa99222ba2e9332e4034ff0c3aff9047392076855d460c7ea22e2"
+      "sha256": "f45e44eecc5aa99222ba2e9332e4034ff0c3aff9047392076855d460c7ea22e2",
+      "inline_file": "_source/site/articles/dermatology-07/index.html"
     },
     {
       "path": "articles/dermatology-bullous/index.html",
       "size": 52940,
-      "sha256": "84a34ac4dfbaa6ffd70ef4824e7645d51b1764d3fbfb9e78ed04fdf78b9c6253"
+      "sha256": "84a34ac4dfbaa6ffd70ef4824e7645d51b1764d3fbfb9e78ed04fdf78b9c6253",
+      "inline_file": "_source/site/articles/dermatology-bullous/index.html"
     },
     {
       "path": "articles/dermatology-drug-eruption/index.html",
       "size": 72832,
-      "sha256": "23bec36d10c42677e76a0155136be101d0413d922d55e7362f8acd80ec976779"
+      "sha256": "23bec36d10c42677e76a0155136be101d0413d922d55e7362f8acd80ec976779",
+      "inline_file": "_source/site/articles/dermatology-drug-eruption/index.html"
     },
     {
       "path": "articles/dermatology-eczema/index.html",
       "size": 63539,
-      "sha256": "54b7f8ca4ba46f84d858c9c5aeaa5ebfb3cf403d787daad6810f14f682ce92dd"
+      "sha256": "54b7f8ca4ba46f84d858c9c5aeaa5ebfb3cf403d787daad6810f14f682ce92dd",
+      "inline_file": "_source/site/articles/dermatology-eczema/index.html"
     },
     {
       "path": "articles/dermatology-std/index.html",
       "size": 82104,
-      "sha256": "b2250f91a133f86548a7c8451f462e821bd3787b970dc91cf8ec49232c95b6db"
+      "sha256": "b2250f91a133f86548a7c8451f462e821bd3787b970dc91cf8ec49232c95b6db",
+      "inline_file": "_source/site/articles/dermatology-std/index.html"
     },
     {
       "path": "articles/feishu-ai-agent/index.html",
       "size": 29664,
-      "sha256": "f95e576bb2de102f3d9d61f1c3b5d1e51930b1c734512f5dc596addec5b78d45"
+      "sha256": "f95e576bb2de102f3d9d61f1c3b5d1e51930b1c734512f5dc596addec5b78d45",
+      "inline_file": "_source/site/articles/feishu-ai-agent/index.html"
     },
     {
       "path": "articles/gift-poems/index.html",
       "size": 7602,
-      "sha256": "14a7881e433ae4d2792f7858bf7f9e0a75e2f939224d9f0b3fd3c88bd6b2b37f"
+      "sha256": "14a7881e433ae4d2792f7858bf7f9e0a75e2f939224d9f0b3fd3c88bd6b2b37f",
+      "inline_file": "_source/site/articles/gift-poems/index.html"
     },
     {
       "path": "articles/index.html",
       "size": 37016,
-      "sha256": "3a14042512cb407f98afd981f7b1c4de0157d061b05729c3a531d927bf8234ac"
+      "sha256": "3a14042512cb407f98afd981f7b1c4de0157d061b05729c3a531d927bf8234ac",
+      "inline_file": "_source/site/articles/index.html"
     },
     {
       "path": "articles/letter-to-patients/index.html",
       "size": 63161,
-      "sha256": "b3ac49191a74fd12a4db1a46a801b1fa49d171c390c29f5206aee4e3dc1e6e9b"
+      "sha256": "b3ac49191a74fd12a4db1a46a801b1fa49d171c390c29f5206aee4e3dc1e6e9b",
+      "inline_file": "_source/site/articles/letter-to-patients/index.html"
     },
     {
       "path": "articles/literature-vault/index.html",
       "size": 31179,
-      "sha256": "8e5fd22a504b1f092e9266982c1dee85a01997d7fe27f7b772c4808487866f03"
+      "sha256": "8e5fd22a504b1f092e9266982c1dee85a01997d7fe27f7b772c4808487866f03",
+      "inline_file": "_source/site/articles/literature-vault/index.html"
     },
     {
       "path": "articles/moon-and-stars/index.html",
       "size": 26163,
-      "sha256": "90c6f4eab421fdad49ed68349ac719f5d8ddbf63881b8c7c01114227830ee2dc"
+      "sha256": "90c6f4eab421fdad49ed68349ac719f5d8ddbf63881b8c7c01114227830ee2dc",
+      "inline_file": "_source/site/articles/moon-and-stars/index.html"
     },
     {
       "path": "articles/philosophical-notes/index.html",
       "size": 24569,
-      "sha256": "283e48774ac92273133d0828978ee0851223bf71481ffc5d6f1bd63a17f26559"
+      "sha256": "283e48774ac92273133d0828978ee0851223bf71481ffc5d6f1bd63a17f26559",
+      "inline_file": "_source/site/articles/philosophical-notes/index.html"
     },
     {
       "path": "articles/poetry-and-code/index.html",
       "size": 16327,
-      "sha256": "67732008c5743bb60971a70d6357dc680d795449a1434af8eb5cfea17f58bcba"
+      "sha256": "67732008c5743bb60971a70d6357dc680d795449a1434af8eb5cfea17f58bcba",
+      "inline_file": "_source/site/articles/poetry-and-code/index.html"
     },
     {
       "path": "articles/shiyun-update/index.html",
       "size": 24568,
-      "sha256": "b8fa4c843da9354f46502013b1f7787ad10196185c52c5210e0a01ab776aa6d3"
+      "sha256": "b8fa4c843da9354f46502013b1f7787ad10196185c52c5210e0a01ab776aa6d3",
+      "inline_file": "_source/site/articles/shiyun-update/index.html"
     },
     {
       "path": "articles/smart-files-manager/index.html",
       "size": 23914,
-      "sha256": "645e0f1733d87ea64090591abdaf7387d66e3b2495841a97dea6e6f99e6f6807"
+      "sha256": "645e0f1733d87ea64090591abdaf7387d66e3b2495841a97dea6e6f99e6f6807",
+      "inline_file": "_source/site/articles/smart-files-manager/index.html"
     },
     {
       "path": "articles/star-eyes-moon/index.html",
       "size": 32476,
-      "sha256": "52ad2796779ecd10e59fa6a70ca8a4c2f6e483112d18cbb320f6865c1b1dc530"
+      "sha256": "52ad2796779ecd10e59fa6a70ca8a4c2f6e483112d18cbb320f6865c1b1dc530",
+      "inline_file": "_source/site/articles/star-eyes-moon/index.html"
     },
     {
       "path": "articles/writing-for-you-intro/index.html",
       "size": 40706,
-      "sha256": "186e524cf9dbc3b666100b8380beae8f8ec7a64d974313d5a50760b2a6dd4d5d"
+      "sha256": "186e524cf9dbc3b666100b8380beae8f8ec7a64d974313d5a50760b2a6dd4d5d",
+      "inline_file": "_source/site/articles/writing-for-you-intro/index.html"
     },
     {
       "path": "assets/app.js",
       "size": 5555,
-      "sha256": "42340f6240112ecdcc2675cfb333ff3efe92d87058cb5d3314850c6ab09d1984"
+      "sha256": "42340f6240112ecdcc2675cfb333ff3efe92d87058cb5d3314850c6ab09d1984",
+      "inline_file": "_source/site/assets/app.js"
     },
     {
       "path": "assets/content/ai-ecosystem/image-01b12c5ba8ae36.png",
@@ -1252,7 +1281,8 @@
     {
       "path": "assets/covers/gift-poems.svg",
       "size": 1899,
-      "sha256": "bb1909246e804f587dcb4152a3520695472e5cfb4feb68d39898657ae41cc32c"
+      "sha256": "bb1909246e804f587dcb4152a3520695472e5cfb4feb68d39898657ae41cc32c",
+      "inline_file": "_source/site/assets/covers/gift-poems.svg"
     },
     {
       "path": "assets/covers/poetry-and-code.jpg",
@@ -1262,12 +1292,14 @@
     {
       "path": "assets/favicon.svg",
       "size": 5013,
-      "sha256": "fbef1965d75cef0ae0696f62414c81fdca7aa98f6a2e057cc950a558320605a4"
+      "sha256": "fbef1965d75cef0ae0696f62414c81fdca7aa98f6a2e057cc950a558320605a4",
+      "inline_file": "_source/site/assets/favicon.svg"
     },
     {
       "path": "assets/long-seal-v2.svg",
       "size": 5013,
-      "sha256": "fbef1965d75cef0ae0696f62414c81fdca7aa98f6a2e057cc950a558320605a4"
+      "sha256": "fbef1965d75cef0ae0696f62414c81fdca7aa98f6a2e057cc950a558320605a4",
+      "inline_file": "_source/site/assets/long-seal-v2.svg"
     },
     {
       "path": "assets/profile/barcelona.webp",
@@ -1307,7 +1339,8 @@
     {
       "path": "assets/projects/smart-cover.svg",
       "size": 2300,
-      "sha256": "5a97a52d63c7d2484760f4159487ca0f47792bdffe9b3ced76378a6e7c9ffb00"
+      "sha256": "5a97a52d63c7d2484760f4159487ca0f47792bdffe9b3ced76378a6e7c9ffb00",
+      "inline_file": "_source/site/assets/projects/smart-cover.svg"
     },
     {
       "path": "assets/projects/smart-files.webp",
@@ -1322,92 +1355,110 @@
     {
       "path": "assets/style.css",
       "size": 28763,
-      "sha256": "580f9cc0047060fe2bd171d763d038922f51d2336d8d5d8fe50f1b736f5beda3"
+      "sha256": "580f9cc0047060fe2bd171d763d038922f51d2336d8d5d8fe50f1b736f5beda3",
+      "inline_file": "_source/site/assets/style.css"
     },
     {
       "path": "build-manifest.json",
       "size": 17817,
-      "sha256": "4f143669155646ca25f070befe5f3932e29d029936196de9b40519309cd511a6"
+      "sha256": "4f143669155646ca25f070befe5f3932e29d029936196de9b40519309cd511a6",
+      "inline_file": "_source/site/build-manifest.json"
     },
     {
       "path": "data/catalog.json",
       "size": 12989,
-      "sha256": "1d6951a07f519aa498524d972ca5892c4b6ced824dafebd8bdebe85e3b1b402f"
+      "sha256": "1d6951a07f519aa498524d972ca5892c4b6ced824dafebd8bdebe85e3b1b402f",
+      "inline_file": "_source/site/data/catalog.json"
     },
     {
       "path": "data/poems.json",
       "size": 82629,
-      "sha256": "ce77f75981d49bdfef0f7022dd7cca06a65884548fb7792d27f601e0ace2d901"
+      "sha256": "ce77f75981d49bdfef0f7022dd7cca06a65884548fb7792d27f601e0ace2d901",
+      "inline_file": "_source/site/data/poems.json"
     },
     {
       "path": "feed.xml",
       "size": 14034,
-      "sha256": "f1aa332510db1c34afebf066e041fcf0b918b4102d933fe0e043bcb1f54063a9"
+      "sha256": "f1aa332510db1c34afebf066e041fcf0b918b4102d933fe0e043bcb1f54063a9",
+      "inline_file": "_source/site/feed.xml"
     },
     {
       "path": "index.html",
       "size": 45464,
-      "sha256": "702c4cc275eb5919c921030377a13c88a67ae3c5ad67e37022f4508c874fad32"
+      "sha256": "702c4cc275eb5919c921030377a13c88a67ae3c5ad67e37022f4508c874fad32",
+      "inline_file": "_source/site/index.html"
     },
     {
       "path": "poetry/2023/index.html",
       "size": 118090,
-      "sha256": "7d7b5bfabb5c1aec994692d8f9bac8ae14097127d834c7503817883228fe7b85"
+      "sha256": "7d7b5bfabb5c1aec994692d8f9bac8ae14097127d834c7503817883228fe7b85",
+      "inline_file": "_source/site/poetry/2023/index.html"
     },
     {
       "path": "poetry/2024/index.html",
       "size": 95793,
-      "sha256": "40273bbe1db7cb551ac95f7e473e29e5c37723404b9d15b6cfabaddc1ffdceb4"
+      "sha256": "40273bbe1db7cb551ac95f7e473e29e5c37723404b9d15b6cfabaddc1ffdceb4",
+      "inline_file": "_source/site/poetry/2024/index.html"
     },
     {
       "path": "poetry/2025/index.html",
       "size": 59327,
-      "sha256": "7339f85c50fee102a69608a007c85c685d1dada95f5eec5345ba5a30789ff3ea"
+      "sha256": "7339f85c50fee102a69608a007c85c685d1dada95f5eec5345ba5a30789ff3ea",
+      "inline_file": "_source/site/poetry/2025/index.html"
     },
     {
       "path": "poetry/index.html",
       "size": 5742,
-      "sha256": "0a29d88d551b616f1ef4fa7d1f86342762f948d0c55a66e6de3058391c9340ee"
+      "sha256": "0a29d88d551b616f1ef4fa7d1f86342762f948d0c55a66e6de3058391c9340ee",
+      "inline_file": "_source/site/poetry/index.html"
     },
     {
       "path": "projects/index.html",
       "size": 6085,
-      "sha256": "374161cb2348a9f7c3866c5555504f03e182dfe8eb5f3bd0a9449c3b3189359a"
+      "sha256": "374161cb2348a9f7c3866c5555504f03e182dfe8eb5f3bd0a9449c3b3189359a",
+      "inline_file": "_source/site/projects/index.html"
     },
     {
       "path": "projects/literature-vault/index.html",
       "size": 4593,
-      "sha256": "05df6c7136d2138d28a21fa4b3b25d2334cf5069d1f9d29dff16ff7fe6e35743"
+      "sha256": "05df6c7136d2138d28a21fa4b3b25d2334cf5069d1f9d29dff16ff7fe6e35743",
+      "inline_file": "_source/site/projects/literature-vault/index.html"
     },
     {
       "path": "projects/smart-files-manager/index.html",
       "size": 4523,
-      "sha256": "008954f08f948f9d2a12481f2ad27a0d851b8dd3565ff2f60c698d8e234af32b"
+      "sha256": "008954f08f948f9d2a12481f2ad27a0d851b8dd3565ff2f60c698d8e234af32b",
+      "inline_file": "_source/site/projects/smart-files-manager/index.html"
     },
     {
       "path": "projects/writing-for-you/index.html",
       "size": 4531,
-      "sha256": "76e080edd670a3741a8fc1934f29b485cb3bbbd62be3319dbbfa468110bb9e7a"
+      "sha256": "76e080edd670a3741a8fc1934f29b485cb3bbbd62be3319dbbfa468110bb9e7a",
+      "inline_file": "_source/site/projects/writing-for-you/index.html"
     },
     {
       "path": "robots.txt",
       "size": 99,
-      "sha256": "2303e242d70d256d4dd8a2752f1f6d0d119e9087f45c169f989ddf99be4bd94a"
+      "sha256": "2303e242d70d256d4dd8a2752f1f6d0d119e9087f45c169f989ddf99be4bd94a",
+      "inline_file": "_source/site/robots.txt"
     },
     {
       "path": "science/dermatovenereology/index.html",
       "size": 19768,
-      "sha256": "bc9a738a7212433e0a454688e839c6071beb8599d57439ccd49b9083be714219"
+      "sha256": "bc9a738a7212433e0a454688e839c6071beb8599d57439ccd49b9083be714219",
+      "inline_file": "_source/site/science/dermatovenereology/index.html"
     },
     {
       "path": "science/index.html",
       "size": 20157,
-      "sha256": "96c7aa82bac32bbcedcfcfeefcbea3def4111a086b47da43a409e4bf5eed86ff"
+      "sha256": "96c7aa82bac32bbcedcfcfeefcbea3def4111a086b47da43a409e4bf5eed86ff",
+      "inline_file": "_source/site/science/index.html"
     },
     {
       "path": "sitemap.xml",
       "size": 3735,
-      "sha256": "f9b0a0e783b376836561215df777b9e728e199b043e4c340dfde9bbfe4535ca4"
+      "sha256": "f9b0a0e783b376836561215df777b9e728e199b043e4c340dfde9bbfe4535ca4",
+      "inline_file": "_source/site/sitemap.xml"
     }
   ]
 }

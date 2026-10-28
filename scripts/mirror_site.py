@@ -76,6 +76,10 @@ def main():
         relative=PurePosixPath(entry['path'])
         if relative.is_absolute() or '..' in relative.parts or any(x.startswith('.') for x in relative.parts):raise RuntimeError('Unsafe release path')
         if args.local_source:data=(args.local_source/Path(*relative.parts)).read_bytes()
+        elif entry.get('inline_file'):
+            inline=PurePosixPath(entry['inline_file'])
+            if inline.is_absolute() or '..' in inline.parts:raise RuntimeError('Unsafe inline source path')
+            data=(ROOT/Path(*inline.parts)).read_bytes()
         else:
             for attempt in range(3):
                 try:
@@ -85,7 +89,7 @@ def main():
                 except Exception:
                     if attempt==2:raise
                     time.sleep(attempt+1)
-        if len(data)!=entry['size'] or hashlib.sha256(data).hexdigest()!=entry['sha256']:raise RuntimeError('Release hash mismatch: '+entry['path'])
+        if len(data)!=entry['size'] or hashlib.sha256(data).hexdigest()!=entry['sha256']:raise RuntimeError('Release hash mismatch: '+entry['path']+' expected '+str(entry['size'])+' bytes; received '+str(len(data))+' bytes')
         dest=output/Path(*relative.parts);dest.parent.mkdir(parents=True,exist_ok=True)
         if dest.suffix in {'.html','.xml','.json','.css','.js'}:dest.write_text(adapt(data.decode('utf-8'),source,target,base),encoding='utf-8')
         else:dest.write_bytes(data)

@@ -1,0 +1,181 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>飞书 + AI Agent 办公全指南：自建应用、豆包与多机器人管理 · 龙川武生｜诗与代码</title><meta name="description" content="飞书早已不只是 IM，而是可编程的办公底座。本文用一条主线串起五种接入姿势：飞书开发者能力、豆包工作伙伴代你操作、WorkBuddy 以应用机器人身份双向接入、自定义 Webhook 单向推送，以及多机器人 profile 管理，并给出选型建议。"><meta name="theme-color" content="#f4f4ed"><link rel="canonical" href="https://longchuanwusheng.drtangjunlong.chatgpt.site/articles/feishu-ai-agent/"><meta property="og:type" content="article"><meta property="og:title" content="飞书 + AI Agent 办公全指南：自建应用、豆包与多机器人管理 · 龙川武生｜诗与代码"><meta property="og:description" content="飞书早已不只是 IM，而是可编程的办公底座。本文用一条主线串起五种接入姿势：飞书开发者能力、豆包工作伙伴代你操作、WorkBuddy 以应用机器人身份双向接入、自定义 Webhook 单向推送，以及多机器人 profile 管理，并给出选型建议。"><meta property="og:url" content="https://longchuanwusheng.drtangjunlong.chatgpt.site/articles/feishu-ai-agent/"><meta property="og:image" content="https://longchuanwusheng.drtangjunlong.chatgpt.site/assets/content/feishu-ai-agent/image-8104b956a61886.png"><link rel="icon" type="image/svg+xml" href="/assets/long-seal-v2.svg"><link rel="stylesheet" href="/assets/style.css"><link rel="alternate" type="application/rss+xml" title="龙川武生的推文" href="/feed.xml"><script src="/assets/app.js" defer></script></head><body><a class="skip-link" href="#main">跳到正文</a><header class="site-header" id="top"><div class="container"><div class="header-row"><a class="brand" href="/" aria-label="龙川武生 首页"><span class="brand-seal" aria-hidden="true">龍</span><span><span class="brand-name">龙川武生</span><br><span class="brand-sub">LONG-CHUAN-WU-SHENG</span></span></a><button class="menu-toggle" data-menu aria-expanded="false" aria-controls="siteNav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>导航</button><nav class="nav" id="siteNav" aria-label="主要导航"><a href="/">首页</a><a href="/articles/" aria-current="page">推文</a><a href="/poetry/">诗集</a><a href="/science/">科普</a><a href="/projects/">项目</a><a href="/about/">关于</a><a class="nav-github" href="https://github.com/Longlong-hub" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav></div></div></header><div class="reading-progress" aria-hidden="true"></div><main id="main" class="container reader original-reader"><div class="reader-head"><a class="back-link" href="/articles/">← 回到推文</a><div class="eyebrow" style="margin-top:22px;">AI 创意 </div><h1>飞书 + AI Agent 办公全指南：自建应用、豆包与多机器人管理</h1><div class="reader-meta"><span>文 / 龙川武生</span><span>原稿记录 2026-09-12</span><span>约 9 分钟</span></div></div><div class="reader-layout"><article class="reader-main"><div class="source-article"><section style="font-size:16px;color:#3f3f3f;line-height:1.8;letter-spacing:0.5px;font-family:-apple-system,BlinkMacSystemFont,&#x27;PingFang SC&#x27;,&#x27;Microsoft YaHei&#x27;,sans-serif;">
+
+<section style="margin:0 0 20px;"><img style="width:100%;display:block;border-radius:10px;" src="/assets/content/feishu-ai-agent/image-8104b956a61886.png" alt="" loading="lazy" decoding="async"></section>
+
+<section style="font-size:22px;font-weight:bold;color:#1a1a1a;line-height:1.4;margin:24px 0 12px;" id="section-1">飞书 + AI Agent 办公全指南：自建应用、豆包与多机器人管理</section>
+
+<section style="background:#f5f7fa;border-left:4px solid #3370ff;padding:12px 16px;margin:16px 0;color:#5a5a5a;font-size:15px;line-height:1.8;">飞书早已不是&quot;另一个微信&quot;。对开发者和效率玩家来说，它是 AI Agent 接入企业工作流的天然底座——消息、文档、表格、会议、审批，几乎一切能力都开放了 API。本文用一条主线串起五种接入姿势：从飞书开发者的底层能力，到豆包代你操作，再到 WorkBuddy 这类第三方 Agent 的双向接入，以及最轻量的 Webhook 推送，最后聊聊多机器人怎么管。</section>
+
+<section style="font-size:19px;font-weight:bold;color:#1a1a1a;margin:28px 0 10px;padding-left:10px;border-left:4px solid #3370ff;" id="section-2">一、飞书基础与开发者能力：从&quot;应用&quot;到命令行 CLI</section>
+
+<section style="margin:10px 0;">先说清楚飞书能做什么。它是一套<strong style="color:#1a1a1a;">协作操作系统</strong>：即时消息（IM）、云文档、多维表格（Base）、日历、会议、审批、妙记，全部打通；更关键的是，这些能力都挂在<strong style="color:#1a1a1a;">飞书开放平台</strong>之下，对外提供完整的 API。</section>
+
+<section style="margin:10px 0;">对企业/团队用户而言，真正的入口是<strong style="color:#1a1a1a;">开发者后台（open.feishu.cn）</strong>。在这里你可以创建<strong style="color:#1a1a1a;">企业自建应用</strong>，把任意自动化能力挂进飞书：</section>
+
+<section style="margin:18px 0;"><img style="width:100%;display:block;border-radius:10px;" src="/assets/content/feishu-ai-agent/image-14fed9e179faf8.png" alt="" loading="lazy" decoding="async"><section style="font-size:13px;color:#9aa3b4;text-align:center;margin-top:8px;">飞书：从&quot;应用&quot;到可编程的办公底座</section></section>
+
+<section style="margin:10px 0 10px 4px;padding-left:18px;line-height:1.9;">
+<section style="margin:6px 0;">1. <strong style="color:#1a1a1a;">创建企业自建应用</strong>：填应用名称、描述、图标即可。</section>
+<section style="margin:6px 0;">2. <strong style="color:#1a1a1a;">添加&quot;机器人&quot;能力</strong>：在「添加应用能力」里找到机器人卡片并添加——这一步让你的应用能在会话里被@、能收发消息。</section>
+<section style="margin:6px 0;">3. <strong style="color:#1a1a1a;">配置权限（权限管理）</strong>：按需给应用开通 <code style="background:#eef1f5;padding:1px 5px;border-radius:3px;font-size:14px;color:#3370ff;">im:message</code>、<code style="background:#eef1f5;padding:1px 5px;border-radius:3px;font-size:14px;color:#3370ff;">docx:document</code>、<code style="background:#eef1f5;padding:1px 5px;border-radius:3px;font-size:14px;color:#3370ff;">base:record</code> 等 scope。权限分 tenant（应用级）和 user（用户级）两类，越敏感越需要管理员审批。</section>
+<section style="margin:6px 0;">4. <strong style="color:#1a1a1a;">发布版本</strong>：应用必须「创建版本 → 发布」后，才能在飞书内被真实使用。</section>
+</section>
+
+<section style="margin:18px 0;"><img style="width:100%;display:block;border-radius:10px;" src="/assets/content/feishu-ai-agent/image-8e218a99452767.png" alt="" loading="lazy" decoding="async"><section style="font-size:13px;color:#9aa3b4;text-align:center;margin-top:8px;">在飞书开放平台点击「创建企业自建应用」（图源：WorkBuddy 官方飞书接入指南）</section></section>
+
+<section style="margin:18px 0;"><img style="width:100%;display:block;border-radius:10px;" src="/assets/content/feishu-ai-agent/image-9cf996cb838b77.png" alt="" loading="lazy" decoding="async"><section style="font-size:13px;color:#9aa3b4;text-align:center;margin-top:8px;">在「添加应用能力」中为应用添加「机器人」能力（图源：WorkBuddy 官方飞书接入指南）</section></section>
+
+<section style="margin:18px 0;"><img style="width:100%;display:block;border-radius:10px;" src="/assets/content/feishu-ai-agent/image-f89702d5d4aa15.png" alt="" loading="lazy" decoding="async"><section style="font-size:13px;color:#9aa3b4;text-align:center;margin-top:8px;">在「权限管理」中通过「批量导入/导出权限」批量授予 scope（图源：WorkBuddy 官方飞书接入指南）</section></section>
+
+<section style="margin:10px 0;">但光有网页后台还不够&quot;开发者&quot;。真正提高效率的是 <strong style="color:#1a1a1a;">飞书 CLI（lark-cli）</strong>——飞书官方提供的命令行工具，让你在终端里直接管理应用、调试回调、操作云文档/多维表格/消息，而不必每次都打开网页。它的核心价值有三点：</section>
+
+<section style="margin:10px 0 10px 4px;padding-left:18px;line-height:1.9;">
+<section style="margin:6px 0;">• <strong style="color:#1a1a1a;">凭证与多应用管理</strong>：一条命令即可登记一个应用的 AppID/App Secret，并支持多个应用配置共存（详见第五节）。</section>
+<section style="margin:6px 0;">• <strong style="color:#1a1a1a;">本地调试飞书能力</strong>：在命令行直接读写文档、查表、发消息，适合把飞书当&quot;脚本化的办公后端&quot;。</section>
+<section style="margin:6px 0;">• <strong style="color:#1a1a1a;">与自动化流水线和 Agent 衔接</strong>：很多第三方 Agent（如 WorkBuddy）底层正是通过 lark-cli 的认证模型来对接飞书。</section>
+</section>
+
+<section style="margin:10px 0;">一句话：网页后台负责&quot;定义应用&quot;，CLI 负责&quot;在命令行里驱动应用&quot;。两者配合，飞书就从一个 IM 变成了可编程的工作台。</section>
+
+<section style="font-size:19px;font-weight:bold;color:#1a1a1a;margin:28px 0 10px;padding-left:10px;border-left:4px solid #3370ff;" id="section-3">二、豆包工作伙伴与飞书：以&quot;你本人&quot;的身份行动</section>
+
+<section style="margin:10px 0;">先理清一个产品关系：<strong style="color:#1a1a1a;">豆包工作</strong>是字节旗下&quot;豆包&quot;品牌的 AI 办公产品族，而<strong style="color:#1a1a1a;">豆包工作伙伴</strong>（原飞书 aily，2026 年 8 月 14 日更名）是其中的核心能力之一——一站式智能体搭建与协作平台，可以加&quot;工作伙伴&quot;、组&quot;工作小队&quot;、设自动化任务、建项目并管资源库。</section>
+
+<section style="background:#eef4ff;border-left:4px solid #3370ff;padding:12px 16px;margin:16px 0;color:#2b4a7a;font-size:15px;line-height:1.8;">容易混淆的一点：飞书自身还带着<strong style="color:#2b4a7a;">&quot;智能伙伴&quot;</strong>能力与<strong style="color:#2b4a7a;">妙搭</strong>（低代码/无代码应用搭建平台）。从当前实际体验看，它们与豆包工作伙伴<strong style="color:#2b4a7a;">尚属相对独立的入口和能力</strong>，不要直接划等号。本节聚焦的是豆包工作伙伴这条线。</section>
+
+<section style="margin:18px 0;"><img style="width:100%;display:block;border-radius:10px;" src="/assets/content/feishu-ai-agent/image-d966383bd7689b.png" alt="" loading="lazy" decoding="async"><section style="font-size:13px;color:#9aa3b4;text-align:center;margin-top:8px;">豆包工作伙伴以&quot;你本人&quot;的身份在飞书内行动，代发行为带&quot;豆包&quot;标记</section></section>
+
+<section style="margin:10px 0;">它和飞书的关系非常深：</section>
+
+<section style="margin:10px 0 10px 4px;padding-left:18px;line-height:1.9;">
+<section style="margin:6px 0;">• <strong style="color:#1a1a1a;">账号互通</strong>：你可以用<strong style="color:#1a1a1a;">豆包账号登录飞书</strong>，也可以用<strong style="color:#1a1a1a;">飞书账号登录豆包企业版</strong>。在后者场景下，飞书会把你有权限的数据（姓名、文档、组织信息、消息等）传输给豆包处理。</section>
+<section style="margin:6px 0;">• <strong style="color:#1a1a1a;">在权限范围内代你操作</strong>：工作伙伴能在你已有的权限范围内，连通消息、文档、会议、任务和业务系统，<strong style="color:#1a1a1a;">主动帮你推进工作</strong>。例如基于文档评论自动收集信息并给方案，或把定时报告、信息汇总直接发给指定成员/群组。</section>
+</section>
+
+<section style="background:#fff8e6;border-left:4px solid #ffb300;padding:12px 16px;margin:16px 0;color:#7a5b00;font-size:15px;line-height:1.8;">关键点：豆包是以&quot;你本人&quot;的语境在飞书里行动的。它可以代表你发消息、写文档、建任务——但飞书会为这类 AI 代发行为打上身份标记（部分场景呈现为&quot;豆包发送&quot;之类的备注），而且这个标记由系统生成、<strong style="color:#7a5b00;">不可手动删除</strong>。这既是合规上的好处（AI 代做的动作可追溯到人、可审计），也是它的边界：你无法让豆包&quot;伪装成纯人工&quot;悄悄发消息。</section>
+
+<section style="font-size:19px;font-weight:bold;color:#1a1a1a;margin:28px 0 10px;padding-left:10px;border-left:4px solid #3370ff;" id="section-4">三、第三方 Agent 接入主流方式：以&quot;应用/机器人&quot;身份（WorkBuddy 为例）</section>
+
+<section style="margin:10px 0;">当你要接的不止豆包，而是 WorkBuddy、你自研的 Agent 等<strong style="color:#1a1a1a;">第三方智能体</strong>时，主流做法是——<strong style="color:#1a1a1a;">让 Agent 以&quot;应用的机器人身份&quot;接入飞书</strong>。</section>
+
+<section style="margin:18px 0;"><img style="width:100%;display:block;border-radius:10px;" src="/assets/content/feishu-ai-agent/image-c20e5a8459aa1e.png" alt="" loading="lazy" decoding="async"><section style="font-size:13px;color:#9aa3b4;text-align:center;margin-top:8px;">WorkBuddy 接入飞书：以机器人身份双向协作的链路与两种连接通道</section></section>
+
+<section style="margin:10px 0;">以 WorkBuddy 接入飞书为例（官方操作文档 https://www.workbuddy.cn/docs/workbuddy/Feishu-Guide），完整链路是：</section>
+
+<section style="margin:10px 0 10px 4px;padding-left:18px;line-height:1.9;">
+<section style="margin:6px 0;">1. <strong style="color:#1a1a1a;">飞书侧建应用 + 加机器人能力 + 配权限</strong>（复用第一节步骤）。WorkBuddy 指南要求批量导入一组权限，涵盖消息收发（<code style="background:#eef1f5;padding:1px 5px;border-radius:3px;font-size:14px;color:#3370ff;">im:message</code>、<code style="background:#eef1f5;padding:1px 5px;border-radius:3px;font-size:14px;color:#3370ff;">im:message:send_as_bot</code>）、文档、多维表格、日历、任务、Wiki 等，确保机器人能真正&quot;干活&quot;而非只能聊天。</section>
+<section style="margin:6px 0;">2. <strong style="color:#1a1a1a;">拿凭证</strong>：在「凭证与基础信息」取得 App ID / App Secret；在「事件与回调」取得 Encrypt Key / Verification Token。</section>
+<section style="margin:6px 0;">3. <strong style="color:#1a1a1a;">Agent 侧配置飞书</strong>：在 WorkBuddy 的飞书集成里填入上述凭证。连接模式有两种——<strong style="color:#1a1a1a;">WebSocket 长连接</strong>（适合无公网 IP 的个人/家庭/办公室用户，开箱即用）和 <strong style="color:#1a1a1a;">URL 回调</strong>（需公网服务器，填写 Webhook 地址）。</section>
+<section style="margin:6px 0;">4. <strong style="color:#1a1a1a;">配置事件回调</strong>：飞书侧订阅「接收消息」事件 + 「卡片回传交互」回调，让飞书知道把消息发往哪里。</section>
+<section style="margin:6px 0;">5. <strong style="color:#1a1a1a;">发布应用</strong>，然后在飞书搜索机器人名称即可对话。</section>
+</section>
+
+<section style="margin:18px 0;"><img style="width:100%;display:block;border-radius:10px;" src="/assets/content/feishu-ai-agent/image-82a15ad3e3f920.png" alt="" loading="lazy" decoding="async"><section style="font-size:13px;color:#9aa3b4;text-align:center;margin-top:8px;">在「凭证与基础信息」中获取 App ID 与 App Secret（图源：WorkBuddy 官方飞书接入指南）</section></section>
+
+<section style="margin:18px 0;"><img style="width:100%;display:block;border-radius:10px;" src="/assets/content/feishu-ai-agent/image-1e6e8aba0857c8.png" alt="" loading="lazy" decoding="async"><section style="font-size:13px;color:#9aa3b4;text-align:center;margin-top:8px;">在 WorkBuddy「助理设置 → 飞书集成」中注册飞书通道（WebSocket 长连接模式）（图源：WorkBuddy 官方飞书接入指南）</section></section>
+
+<section style="margin:18px 0;"><img style="width:100%;display:block;border-radius:10px;" src="/assets/content/feishu-ai-agent/image-a646e33a977729.png" alt="" loading="lazy" decoding="async"><section style="font-size:13px;color:#9aa3b4;text-align:center;margin-top:8px;">在飞书开放平台添加「接收消息」事件，让消息能触发机器人（图源：WorkBuddy 官方飞书接入指南）</section></section>
+
+<section style="margin:18px 0;"><img style="width:100%;display:block;border-radius:10px;" src="/assets/content/feishu-ai-agent/image-64d5d41768538c.png" alt="" loading="lazy" decoding="async"><section style="font-size:13px;color:#9aa3b4;text-align:center;margin-top:8px;">创建版本并发布，应用才能正式上线使用（图源：WorkBuddy 官方飞书接入指南）</section></section>
+
+<section style="margin:18px 0;"><img style="width:100%;display:block;border-radius:10px;" src="/assets/content/feishu-ai-agent/image-cd050f1a07880a.png" alt="" loading="lazy" decoding="async"><section style="font-size:13px;color:#9aa3b4;text-align:center;margin-top:8px;">发布成功后，在飞书里给机器人发任务即可远程驱动电脑上的 WorkBuddy（图源：WorkBuddy 官方飞书接入指南）</section></section>
+
+<section style="margin:10px 0;">这种方式的特点是<strong style="color:#1a1a1a;">双向、有身份、能力强</strong>：飞书消息能实时触发 Agent，Agent 以 bot 身份回消息，并能在授权范围内调用文档、表格、日历等一整套 API。它和豆包的本质差异在于<strong style="color:#1a1a1a;">身份</strong>——豆包&quot;像是你本人&quot;，而 WorkBuddy 这类接入是&quot;一个独立的应用机器人&quot;。</section>
+
+<section style="font-size:19px;font-weight:bold;color:#1a1a1a;margin:28px 0 10px;padding-left:10px;border-left:4px solid #3370ff;" id="section-5">四、次要方式：自定义机器人 Webhook 单向推送</section>
+
+<section style="margin:10px 0;">如果你的需求很简单——只是让 Agent/脚本<strong style="color:#1a1a1a;">把消息推到飞书群</strong>，不需要收消息、不需要交互——那么最轻量的方式是<strong style="color:#1a1a1a;">自定义机器人 Webhook</strong>。</section>
+
+<section style="margin:18px 0;"><img style="width:100%;display:block;border-radius:10px;" src="/assets/content/feishu-ai-agent/image-769f0558ef4335.png" alt="" loading="lazy" decoding="async"><section style="font-size:13px;color:#9aa3b4;text-align:center;margin-top:8px;">自定义机器人 Webhook：从脚本单向推送消息到飞书群，不可反向</section></section>
+
+<section style="margin:10px 0;">做法：在群聊设置里「添加机器人 → 自定义机器人」，得到一个 <code style="background:#eef1f5;padding:1px 5px;border-radius:3px;font-size:14px;color:#3370ff;">https://open.feishu.cn/open-apis/bot/v2/hook/xxxx</code> 的 Webhook 地址；可选地配置&quot;签名校验&quot; Secret，发送时带上 <code style="background:#eef1f5;padding:1px 5px;border-radius:3px;font-size:14px;color:#3370ff;">timestamp</code> + <code style="background:#eef1f5;padding:1px 5px;border-radius:3px;font-size:14px;color:#3370ff;">sign</code> 防伪造；然后直接 POST 一条消息卡片（JSON）即可上墙。</section>
+
+<section style="margin:10px 0;">它的边界非常明确：</section>
+
+<section style="margin:10px 0 10px 4px;padding-left:18px;line-height:1.9;">
+<section style="margin:6px 0;">• <strong style="color:#1a1a1a;">单向</strong>：只能 Agent/脚本 → 飞书，<strong style="color:#1a1a1a;">飞书无法反向触发 Agent</strong>，也收不到用户回复。</section>
+<section style="margin:6px 0;">• <strong style="color:#1a1a1a;">无身份上下文</strong>：它只是一个群里的&quot;广播喇叭&quot;，不绑定具体用户权限，不能读写你的文档或表格。</section>
+<section style="margin:6px 0;">• <strong style="color:#1a1a1a;">适用面窄但够用</strong>：服务器告警、CI 通知、定时播报、数据日报这类&quot;只发不收&quot;的场景，这是成本最低的方案。</section>
+</section>
+
+<section style="margin:10px 0;">一句话总结第三节与第四节：<strong style="color:#1a1a1a;">要双向协作、要调用飞书能力，走&quot;应用机器人&quot;；只要单向播报，走 Webhook</strong>。</section>
+
+<section style="font-size:19px;font-weight:bold;color:#1a1a1a;margin:28px 0 10px;padding-left:10px;border-left:4px solid #3370ff;" id="section-6">五、多机器人（多应用）的管理：lark-cli profile 实战</section>
+
+<section style="margin:10px 0;">当你的飞书里同时跑着 WorkBuddy、自建通知机器人、测试应用……多个 AppID/App Secret 就开始难管了。我的经验是用 <strong style="color:#1a1a1a;">lark-cli 的多 profile</strong> 来隔离。</section>
+
+<section style="margin:18px 0;"><img style="width:100%;display:block;border-radius:10px;" src="/assets/content/feishu-ai-agent/image-8de51c0a8a6fa1.png" alt="" loading="lazy" decoding="async"><section style="font-size:13px;color:#9aa3b4;text-align:center;margin-top:8px;">lark-cli 多 profile 管理：按名字隔离凭证，按需切换系统默认 CLI</section></section>
+
+<section style="margin:10px 0;">新增一个机器人（应用）配置：</section>
+
+<section style="background:#1e1e1e;color:#e6e6e6;padding:14px 16px;margin:14px 0;font-family:Consolas,Menlo,Monaco,monospace;font-size:13.5px;line-height:1.7;border-radius:6px;white-space:pre-wrap;overflow-x:auto;">lark-cli config init \
+  --app-id &lt;你的AppID&gt; \
+  --app-secret-stdin \
+  --name &lt;自定义名字&gt;
+# 回车后按提示粘贴 App Secret</section>
+
+<section style="margin:10px 0;">执行后，这个新配置会写入 lark-cli 的配置文件：</section>
+
+<section style="background:#1e1e1e;color:#e6e6e6;padding:14px 16px;margin:14px 0;font-family:Consolas,Menlo,Monaco,monospace;font-size:13.5px;line-height:1.7;border-radius:6px;white-space:pre-wrap;overflow-x:auto;">~/.lark-cli/config.json
+# Windows 下即 C:\Users\&lt;你的用户名&gt;\.lark-cli\config.json</section>
+
+<section style="margin:10px 0;">文件里就能看到刚添加的 <code style="background:#eef1f5;padding:1px 5px;border-radius:3px;font-size:14px;color:#3370ff;">&lt;自定义名字&gt;</code> 及其凭证。要用哪一个作为系统默认 CLI，切一下即可：</section>
+
+<section style="background:#1e1e1e;color:#e6e6e6;padding:14px 16px;margin:14px 0;font-family:Consolas,Menlo,Monaco,monospace;font-size:13.5px;line-height:1.7;border-radius:6px;white-space:pre-wrap;overflow-x:auto;">lark-cli profile use &lt;自定义名字&gt;</section>
+
+<section style="margin:10px 0;">几条实战建议：</section>
+
+<section style="margin:10px 0 10px 4px;padding-left:18px;line-height:1.9;">
+<section style="margin:6px 0;">• <strong style="color:#1a1a1a;">命名要有意义</strong>：用 <code style="background:#eef1f5;padding:1px 5px;border-radius:3px;font-size:14px;color:#3370ff;">workbuddy</code>、<code style="background:#eef1f5;padding:1px 5px;border-radius:3px;font-size:14px;color:#3370ff;">ci-notify</code>、<code style="background:#eef1f5;padding:1px 5px;border-radius:3px;font-size:14px;color:#3370ff;">dev-test</code> 这类可辨识的名字，别用 app1、app2。</section>
+<section style="margin:6px 0;">• <strong style="color:#1a1a1a;">按项目/环境隔离</strong>：生产、测试、个人各用一个 profile，避免脚本误用错应用的凭证。</section>
+<section style="margin:6px 0;">• <strong style="color:#1a1a1a;">密钥妥善保管</strong>：App Secret 等同于应用密码，不要写进仓库或贴到聊天里；lark-cli 用 <code style="background:#eef1f5;padding:1px 5px;border-radius:3px;font-size:14px;color:#3370ff;">--app-secret-stdin</code> 从标准输入读取，比命令行参数更安全。</section>
+<section style="margin:6px 0;">• <strong style="color:#1a1a1a;">多人协作时统一约定</strong>：团队内约定 profile 命名与 config 存放位置，换机器也能快速复现环境。</section>
+</section>
+
+<section style="font-size:19px;font-weight:bold;color:#1a1a1a;margin:28px 0 10px;padding-left:10px;border-left:4px solid #3370ff;" id="section-7">结语：三种&quot;身份&quot;，怎么选？</section>
+
+<section style="margin:10px 0;">把全文收个口——接入飞书的 Agent，本质上是三种身份模型：</section>
+
+<section style="margin:14px 0;">
+<section style="overflow-x:auto;">
+<table style="width:100%;border-collapse:collapse;font-size:14px;line-height:1.7;color:#3f3f3f;">
+<thead>
+<tr style="background:#3370ff;color:#ffffff;">
+<th style="border:1px solid #d9dde3;padding:8px 10px;text-align:left;font-weight:bold;">身份</th>
+<th style="border:1px solid #d9dde3;padding:8px 10px;text-align:left;font-weight:bold;">代表</th>
+<th style="border:1px solid #d9dde3;padding:8px 10px;text-align:left;font-weight:bold;">方向</th>
+<th style="border:1px solid #d9dde3;padding:8px 10px;text-align:left;font-weight:bold;">能力边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="border:1px solid #d9dde3;padding:8px 10px;">你本人（AI 代行）</td>
+<td style="border:1px solid #d9dde3;padding:8px 10px;">豆包工作伙伴</td>
+<td style="border:1px solid #d9dde3;padding:8px 10px;">双向，但在你权限内</td>
+<td style="border:1px solid #d9dde3;padding:8px 10px;">带&quot;豆包&quot;标记、不可删，可审计</td>
+</tr>
+<tr style="background:#f5f7fa;">
+<td style="border:1px solid #d9dde3;padding:8px 10px;">应用机器人</td>
+<td style="border:1px solid #d9dde3;padding:8px 10px;">WorkBuddy 等第三方 Agent</td>
+<td style="border:1px solid #d9dde3;padding:8px 10px;">双向</td>
+<td style="border:1px solid #d9dde3;padding:8px 10px;">独立 bot 身份，可调用授权 API</td>
+</tr>
+<tr>
+<td style="border:1px solid #d9dde3;padding:8px 10px;">自定义 Webhook</td>
+<td style="border:1px solid #d9dde3;padding:8px 10px;">脚本/服务播报</td>
+<td style="border:1px solid #d9dde3;padding:8px 10px;">单向（仅推送）</td>
+<td style="border:1px solid #d9dde3;padding:8px 10px;">无上下文、不能收消息</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+<section style="margin:10px 0;">选型其实很简单：<strong style="color:#1a1a1a;">想让 AI 以你的身份办事 → 豆包；想接一个能双向协作的独立 Agent → 自建应用机器人；只想低成本把消息推上墙 → 自定义 Webhook。</strong>三者不互斥，实际办公里常常是&quot;豆包管日常、WorkBuddy 管重活、Webhook 管告警&quot;的组合。</section>
+
+<section style="margin:10px 0;">飞书把办公变成了可编程的底座，而 Agent 是跑在这套底座上的&quot;数字同事&quot;。先把应用和机器人建起来，剩下的，交给它们去跑。</section>
+
+<section style="margin:24px 0 8px;padding-top:16px;border-top:1px solid #e8eaed;color:#8a9099;font-size:14px;text-align:center;">觉得有用？点个关注，后面继续拆解 AI Agent 办公的实战玩法。</section>
+
+</section>
+</div><div class="reader-foot"><a class="text-link" href="/articles/">← 继续读点别的</a></div></article><aside class="reader-aside" aria-label="本文目录"><details open><summary>这一篇 · 阅读目录</summary><ol class="toc"><li><a href="#section-1">飞书 + AI Agent 办公全指南：自建应用、豆包与多机器人管理</a></li><li><a href="#section-2">一、飞书基础与开发者能力：从&quot;应用&quot;到命令行 CLI</a></li><li><a href="#section-3">二、豆包工作伙伴与飞书：以&quot;你本人&quot;的身份行动</a></li><li><a href="#section-4">三、第三方 Agent 接入主流方式：以&quot;应用/机器人&quot;身份（WorkBuddy 为例）</a></li><li><a href="#section-5">四、次要方式：自定义机器人 Webhook 单向推送</a></li><li><a href="#section-6">五、多机器人（多应用）的管理：lark-cli profile 实战</a></li><li><a href="#section-7">结语：三种&quot;身份&quot;，怎么选？</a></li></ol></details></aside></div></main><footer class="site-footer"><div class="container footer-row"><div><div class="footer-mark">不失赤子之心，不坠青云之志。</div><div class="footer-signature">龙川武生 · 心有所向，诗有所往。</div></div><div class="footer-links"><a href="/about/">关于这里</a><a href="/about/#wechat">微信公众号</a><a href="https://github.com/Longlong-hub" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="/feed.xml">RSS</a></div></div></footer><a href="#top" class="back-top" aria-label="回到顶部" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 13 6-6 6 6M12 7v13"/></svg></a></body></html>

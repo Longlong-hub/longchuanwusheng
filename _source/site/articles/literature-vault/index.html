@@ -1,0 +1,182 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>诗云 · Literature Vault：给 Obsidian 装上文学可视化引擎 · 龙川武生｜诗与代码</title><meta name="description" content="一套零依赖的 Obsidian 文学知识库方案：规范归档 + 诗云可视化，让一个人 + AI 也能维护个人文学仓库。"><meta name="theme-color" content="#f4f4ed"><link rel="canonical" href="https://longchuanwusheng.drtangjunlong.chatgpt.site/articles/literature-vault/"><meta property="og:type" content="article"><meta property="og:title" content="诗云 · Literature Vault：给 Obsidian 装上文学可视化引擎 · 龙川武生｜诗与代码"><meta property="og:description" content="一套零依赖的 Obsidian 文学知识库方案：规范归档 + 诗云可视化，让一个人 + AI 也能维护个人文学仓库。"><meta property="og:url" content="https://longchuanwusheng.drtangjunlong.chatgpt.site/articles/literature-vault/"><meta property="og:image" content="https://longchuanwusheng.drtangjunlong.chatgpt.site/assets/content/literature-vault/image-8a35ea05f41659.png"><link rel="icon" type="image/svg+xml" href="/assets/long-seal-v2.svg"><link rel="stylesheet" href="/assets/style.css"><link rel="alternate" type="application/rss+xml" title="龙川武生的推文" href="/feed.xml"><script src="/assets/app.js" defer></script></head><body><a class="skip-link" href="#main">跳到正文</a><header class="site-header" id="top"><div class="container"><div class="header-row"><a class="brand" href="/" aria-label="龙川武生 首页"><span class="brand-seal" aria-hidden="true">龍</span><span><span class="brand-name">龙川武生</span><br><span class="brand-sub">LONG-CHUAN-WU-SHENG</span></span></a><button class="menu-toggle" data-menu aria-expanded="false" aria-controls="siteNav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>导航</button><nav class="nav" id="siteNav" aria-label="主要导航"><a href="/">首页</a><a href="/articles/" aria-current="page">推文</a><a href="/poetry/">诗集</a><a href="/science/">科普</a><a href="/projects/">项目</a><a href="/about/">关于</a><a class="nav-github" href="https://github.com/Longlong-hub" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav></div></div></header><div class="reading-progress" aria-hidden="true"></div><main id="main" class="container reader original-reader"><div class="reader-head"><a class="back-link" href="/articles/">← 回到推文</a><div class="eyebrow" style="margin-top:22px;">AI 创意 </div><h1>诗云 · Literature Vault：给 Obsidian 装上文学可视化引擎</h1><div class="reader-meta"><span>文 / 龙川武生</span><span>原稿记录 2026-08-17</span><span>约 8 分钟</span></div></div><div class="reader-layout"><article class="reader-main"><div class="source-article"><section style="font-family:-apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Roboto, sans-serif; font-size:16px; line-height:1.8; color:#333333; padding:16px; text-align:left;">
+
+<p style="text-align:center; margin:1.5em 0;"><img style="max-width:100%; border-radius:4px; display:block; margin:20px auto; opacity:0.92;" src="/assets/content/literature-vault/image-8a35ea05f41659.png" alt="诗云「品」页：诗字形词云" loading="lazy" decoding="async"></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">提笔时千言万语，落笔后无人问津——这大概是每个写作者都隐秘的遗憾。</p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">我们写诗、写散文、写随感，把某一刻的欢喜与怅惘都交付给文字。可这些文字，往往写完就被收进 Obsidian 的某个角落：标签越积越乱，检索越来越难，时间一久，连自己都忘了曾写下过什么。它们不是消失了，只是<b style="color:#6B5E54;">「沉」了下去</b>——写时有多真切，沉时就有多可惜。</p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">我一直想给这些文字一个更好的去处：不是冷冰冰的仓库，而是一座<b style="color:#6B5E54;">能被看见、被品味、被持续翻阅</b>的个人文学馆。于是有了今天这个开源项目：<b style="color:#6B5E54;">诗云 · Literature Vault</b>。它提供一套完整的文学知识库规范，并配一个零依赖的本地可视化服务，让「一个人 + AI」也能把 Obsidian 变成<b style="color:#6B5E54;">可归档、可检索、可赏析</b>的文学仓库。</p>
+
+<p style="text-align:center; margin:1.5em 0;"><img style="max-width:100%; border-radius:4px; display:block; margin:20px auto; opacity:0.92;" src="/assets/content/literature-vault/image-8a35ea05f41659.png" alt="诗云「品」页：诗字形词云" loading="lazy" decoding="async"></p>
+
+<h2 style="font-size:18px; font-weight:bold; color:#6B5E54; margin:2em 0 1em; padding-bottom:6px; border-bottom:3px double #C8BEB4;" id="section-1">一、它到底解决什么</h2>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">文学创作者常见的几个痛点：</p>
+
+<ul style="color:#5A5148; font-size:16px; line-height:1.85; letter-spacing:2px; padding-left:1.2em; margin:10px 0;">
+<li style="margin:6px 0;"><b style="color:#6B5E54;">散</b>：诗作、文选、摘录、专辑散落在不同目录，没有统一归档；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">乱</b>：标签、分类、命名随心所欲，时间久了连自己都找不到；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">沉</b>：写完就忘，没有总目、年选集和赏析体系；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">孤</b>：Obsidian 里只能看纯文本，缺少对诗的可视化品味与赏析互动。</li>
+</ul>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">Literature Vault 把「仓库规范 + 可视化服务」打包给你：先按约定把文字整理好，再通过诗云服务把它们「品」成词云、「赏」成篇章。</p>
+
+<h2 style="font-size:18px; font-weight:bold; color:#6B5E54; margin:2em 0 1em; padding-bottom:6px; border-bottom:3px double #C8BEB4;" id="section-2">二、它是什么</h2>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">一句话：<b style="color:#6B5E54;">一套可直接挂在 Obsidian 文学库上的「规范 + 可视化」方案</b>。</p>
+
+<ul style="color:#5A5148; font-size:16px; line-height:1.85; letter-spacing:2px; padding-left:1.2em; margin:10px 0;">
+<li style="margin:6px 0;"><b style="color:#6B5E54;">知识库规范</b>：raw 写作区 → wiki 归档区的双维度归档体系；frontmatter 规范、8 主题分类、5 大体裁识别、随吟/专辑拆分、总目与日志管理，配套 Agent Skill（ingest / query / lint）。</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">诗云可视化</b>：纯 Node.js 零依赖本地服务（端口 8899）。「品」看诗字形词云；「赏」看逐篇赏析；可选一键调用大模型即时生评；支持 Obsidian Local REST API 实时数据源切换。</li>
+</ul>
+
+<h2 style="font-size:18px; font-weight:bold; color:#6B5E54; margin:2em 0 1em; padding-bottom:6px; border-bottom:3px double #C8BEB4;" id="section-3">三、核心特性</h2>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;" id="section-4">知识库侧</b></p>
+
+<ul style="color:#5A5148; font-size:16px; line-height:1.85; letter-spacing:2px; padding-left:1.2em; margin:10px 0;">
+<li style="margin:6px 0;"><b style="color:#6B5E54;">双维度归档</b>：按「语言 → 主题」与「年份 → 语言 → 主题」自动组织；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">Frontmatter 规范</b>：诗 / 文选 / 摘录 / 专辑 / 赏析五种文档类型统一定义（含干支纪年时间戳）；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">体裁识别</b>：近体诗 / 词 / 现代诗 / 随吟 / 英文诗 五类，AI 自动判定；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">随吟拆分</b>：一行一首的随吟写作区，归档时自动按首拆分为独立诗篇；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">专辑拆分</b>：多语言混合专辑按日期拆分为独立诗歌入档；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">文学检索与健康巡检</b>：<code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">/query</code> 双链式检索、<code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">/lint</code> 死链/孤岛/格式体检；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">赏析体系</b>：每篇赏析对应一首已归档作品，含 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">rating</code> 与 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">best_line</code>。</li>
+</ul>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;" id="section-5">诗云侧（零依赖，纯 Node 标准库）</b></p>
+
+<ul style="color:#5A5148; font-size:16px; line-height:1.85; letter-spacing:2px; padding-left:1.2em; margin:10px 0;">
+<li style="margin:6px 0;"><b style="color:#6B5E54;">品</b>：实时读取归档诗集，基于整理自 <a style="color:#6B5E54; text-decoration:none; border-bottom:1px solid #C8BEB4;" href="https://github.com/chinese-poetry/chinese-poetry" target="_blank" rel="noopener noreferrer">chinese-poetry/chinese-poetry</a> 开源诗词数据集的分词词库生成诗字形词云；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">赏</b>：优先展示有赏析的作品，按体裁选取段落；无赏析可一键 AI 生评；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">双数据源</b>：默认直读本地文件；接入 Obsidian Local REST API 后自动切换；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">配置热更新</b>：<code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">config.json</code> 管理数据源与 LLM 参数，网页端可改。</li>
+</ul>
+
+<p style="text-align:center; margin:1.5em 0;"><img style="max-width:100%; border-radius:4px; display:block; margin:20px auto; opacity:0.92;" src="/assets/content/literature-vault/image-b05ab015bf621a.png" alt="诗云「赏」页：逐篇赏析展示" loading="lazy" decoding="async"></p>
+
+<h2 style="font-size:18px; font-weight:bold; color:#6B5E54; margin:2em 0 1em; padding-bottom:6px; border-bottom:3px double #C8BEB4;" id="section-6">四、快速开始</h2>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;" id="section-7">环境要求</b></p>
+
+<ul style="color:#5A5148; font-size:16px; line-height:1.85; letter-spacing:2px; padding-left:1.2em; margin:10px 0;">
+<li style="margin:6px 0;">Node.js ≥ 18（内置 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">fetch</code>）</li>
+<li style="margin:6px 0;">一个按本仓库规范组织的 Obsidian 文学知识库（见 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">docs/知识库建立与管理.md</code>）</li>
+</ul>
+
+<blockquote style="margin:1em 0; padding:12px 16px; background:#faf8f5; border-left:4px solid #C8BEB4; border-radius:4px; font-size:15px; line-height:1.8; color:#6b5e54;">即使完全不懂 Node、不写配置，也能让 agent 帮你跑起来。下面先给最省事的 agent 路线，再附手动步骤备用。</blockquote>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;" id="section-8">最省事：用 Agent 一站式配置项目并搭建诗云（推荐）</b></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">目录、配置、启动这些事，其实都可以交给一个 AI Agent 替你做完，你完全不必手动照着下面的步骤来。把本仓库（连同 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">docs/</code> 规范文档）交给任意支持读写文件的智能体（Claude Code、Opencode，或你正在用的 WorkBuddy 这类），对它说「按本仓库规范帮我初始化文学库并启动诗云」，它就会参照 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">docs/</code> 自动完成：</p>
+
+<ul style="color:#5A5148; font-size:16px; line-height:1.85; letter-spacing:2px; padding-left:1.2em; margin:10px 0;">
+<li style="margin:6px 0;"><b style="color:#6B5E54;">初始化目录结构</b>：按规范生成 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">raw/</code>（诗集 / 文选 / 专辑 / 收藏）、<code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">wiki/</code>（归档 / 赏析 / 年选集 + <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">index.md</code> / <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">log.md</code>）、<code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">诗云/</code> 整套骨架；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">配置 config.json</b>：按你的笔名、是否接 Obsidian、是否接大模型，写好 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">source</code> / <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">author</code> / <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">llm</code> 三项；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">搭建并启动诗云</b>：放好 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">server.js</code> 与 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">index.html</code>，运行 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">node server.js</code>（Windows 也可双击 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">start.bat</code>），打开 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">http://localhost:8899</code> 即见「品」「赏」；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">之后持续维护</b>：新作归档用 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">/ingest &lt;文件&gt;</code>、体检用 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">/lint</code>、检索用 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">/query</code>——三套 Agent Skill 让「写作 → 归档 → 赏析 → 检索」全程不用手敲规范。</li>
+</ul>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">一句话：你把文字写进 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">raw/</code>，目录、配置、启动、归档都交给 agent，剩下的只是打开网页欣赏。</p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;" id="section-9">1. 目录约定</b></p>
+
+<p style="margin:1em 0;"><section style="background:#f5f2ee; border-left:4px solid #C8BEB4; border-radius:4px; padding:12px 14px; font-family:Consolas,&#x27;Courier New&#x27;,monospace; font-size:13px; line-height:1.7; color:#4a4038; white-space:pre-wrap; word-break:break-all;">你的文学库/
+├── raw/            # 写作区
+│   ├── 诗集/
+│   ├── 文选/
+│   ├── 专辑/
+│   └── 收藏/
+├── wiki/           # 输出层
+│   ├── 归档/
+│   ├── 赏析/
+│   ├── 年选集/
+│   ├── index.md
+│   └── log.md
+└── 诗云/           # 本可视化系统</section></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;" id="section-10">2. 启动诗云</b></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">Windows：双击 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">诗云/start.bat</code>，或运行 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">node server.js</code>。</p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">macOS / Linux：</p>
+
+<p style="margin:1em 0;"><section style="background:#f5f2ee; border-left:4px solid #C8BEB4; border-radius:4px; padding:12px 14px; font-family:Consolas,&#x27;Courier New&#x27;,monospace; font-size:13px; line-height:1.7; color:#4a4038; white-space:pre-wrap; word-break:break-all;">cd 诗云
+node server.js</section></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">浏览器打开 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">http://localhost:8899</code>。</p>
+
+<p style="margin:1em 0; padding:12px 14px; background:#f0f5f0; border-left:4px solid #7a9a7a; border-radius:4px; font-size:15px; line-height:1.8; color:#3a5a3a;"><b>提示</b>：<code style="background:#e8efe8; padding:1px 5px; border-radius:3px; font-size:14px; color:#3a5a3a;">server.js</code> 默认从 <code style="background:#e8efe8; padding:1px 5px; border-radius:3px; font-size:14px; color:#3a5a3a;">../wiki/归档/诗集</code> 与 <code style="background:#e8efe8; padding:1px 5px; border-radius:3px; font-size:14px; color:#3a5a3a;">../wiki/赏析</code> 读取数据，请保证诗云目录位于文学库根目录下。</p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;" id="section-11">3. 配置（可选）</b></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">config.json</code>（不入 git）：</p>
+
+<p style="margin:1em 0;"><section style="background:#f5f2ee; border-left:4px solid #C8BEB4; border-radius:4px; padding:12px 14px; font-family:Consolas,&#x27;Courier New&#x27;,monospace; font-size:13px; line-height:1.7; color:#4a4038; white-space:pre-wrap; word-break:break-all;">{
+  &quot;source&quot;: &quot;auto&quot;,
+  &quot;author&quot;: &quot;你的笔名&quot;,
+  &quot;llm&quot;: {
+    &quot;base&quot;: &quot;https://api.deepseek.com&quot;,
+    &quot;key&quot;: &quot;sk-xxx&quot;,
+    &quot;model&quot;: &quot;deepseek-v4-pro&quot;
+  }
+}</section></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;" id="section-12">4. 接入 Obsidian 实时数据源</b></p>
+
+<ul style="color:#5A5148; font-size:16px; line-height:1.85; letter-spacing:2px; padding-left:1.2em; margin:10px 0;">
+<li style="margin:6px 0;">安装社区插件 <b style="color:#6B5E54;">Obsidian Local REST API</b>；</li>
+<li style="margin:6px 0;">启用 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">Enable Insecure Server</code>，记住端口（默认 27123）；</li>
+<li style="margin:6px 0;">设置页获取 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">API Key</code>；</li>
+<li style="margin:6px 0;">网页右上角数据源切到 Obsidian，或把 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">config.json</code> 的 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">source</code> 设为 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">&quot;obsidian&quot;</code>。</li>
+</ul>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;" id="section-13">5. 接入大模型</b></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">网页「一键生评」或前端配置项填入 base / key / model。兼容 OpenAI Chat Completions 协议（DeepSeek、通义、Moonshot 等）。</p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">6. 用 Agent 一站式配置项目并搭建诗云（推荐）</b></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">前面 1–5 步的目录、配置、启动，其实都可以交给一个 AI Agent 替你做完。把本仓库（连同 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">docs/</code> 规范文档）交给任意支持读写文件的智能体（Claude Code、Opencode，或你正在用的 WorkBuddy 这类），对它说「按本仓库规范帮我初始化文学库并启动诗云」，它就会参照 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">docs/</code> 自动完成：</p>
+
+<ul style="color:#5A5148; font-size:16px; line-height:1.85; letter-spacing:2px; padding-left:1.2em; margin:10px 0;">
+<li style="margin:6px 0;"><b style="color:#6B5E54;">初始化目录结构</b>：按规范生成 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">raw/</code>（诗集 / 文选 / 专辑 / 收藏）、<code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">wiki/</code>（归档 / 赏析 / 年选集 + <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">index.md</code> / <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">log.md</code>）、<code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">诗云/</code> 整套骨架；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">配置 config.json</b>：按你的笔名、是否接 Obsidian、是否接大模型，写好 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">source</code> / <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">author</code> / <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">llm</code> 三项；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">搭建并启动诗云</b>：放好 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">server.js</code> 与 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">index.html</code>，运行 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">node server.js</code>（Windows 也可双击 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">start.bat</code>），打开 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">http://localhost:8899</code> 即见「品」「赏」；</li>
+<li style="margin:6px 0;"><b style="color:#6B5E54;">之后持续维护</b>：新作归档用 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">/ingest &lt;文件&gt;</code>、体检用 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">/lint</code>、检索用 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">/query</code>——三套 Agent Skill 让「写作 → 归档 → 赏析 → 检索」全程不用手敲规范。</li>
+</ul>
+
+<h2 style="font-size:18px; font-weight:bold; color:#6B5E54; margin:2em 0 1em; padding-bottom:6px; border-bottom:3px double #C8BEB4;" id="section-14">五、视频演示</h2>
+
+
+
+<h2 style="font-size:18px; font-weight:bold; color:#6B5E54; margin:2em 0 1em; padding-bottom:6px; border-bottom:3px double #C8BEB4;" id="section-15">六、技术细节（可跳过）</h2>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">放心，它没你想的那么重。诗云是一个<b style="color:#6B5E54;">零依赖的轻量服务</b>：没有数据库，没有后端框架，整个系统就是一份 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">server.js</code>。它只对外暴露几个极简接口——取状态、取诗文、取赏析、热更新配置、调用大模型生评——仅此而已。你不必懂接口，双击 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">start.bat</code>、打开网页就能用。</p>
+
+<h2 style="font-size:18px; font-weight:bold; color:#6B5E54; margin:2em 0 1em; padding-bottom:6px; border-bottom:3px double #C8BEB4;" id="section-16">七、你可能关心的问题（FAQ）</h2>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">Q：必须搭配 Obsidian 吗？</b><br>不一定。诗云默认从本地文件读取，只要目录结构符合规范即可；Obsidian 只是推荐的写作环境。</p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">Q：没有大模型 API 能用吗？</b><br>完全可以。「品」和「赏」不依赖 LLM；只有「AI 一键生评」需要配置接口。</p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;"><b style="color:#6B5E54;">Q：支持 Windows 吗？</b><br>支持。Windows 下提供 <code style="background:#f0ece6; padding:1px 5px; border-radius:3px; font-size:14px; color:#4a4038;">start.bat</code>，双击即可启动。</p>
+
+<h2 style="font-size:18px; font-weight:bold; color:#6B5E54; margin:2em 0 1em; padding-bottom:6px; border-bottom:3px double #C8BEB4;" id="section-17">写在最后</h2>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">有人说，写诗是和自己说话；我说，把诗安放好，是让未来的自己还能听见当年的声音。</p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">一座个人文学库的意义，从来不在「存了多少字」，而在「这些字有没有被认真地看见过」。Literature Vault 做的，正是这样一件小事：先用一套温柔而清晰的规范，把散落的文字收拢归档；再借「诗云」之手，把它们化作词云、化作篇章，让你随时能回头，与某一年的自己重逢。</p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">如果你也写过不少字、藏过不少心绪，不妨试试把它交给诗云。一个人，加上一点点 AI，也能经营好一座属于自己的文学馆。</p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">项目已开源，采用 <b style="color:#6B5E54;">MIT 许可</b>。愿它也能安放你的某一段时光：</p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:1px;"><b style="color:#6B5E54;">🔗 https://github.com/Longlong-hub/Literature-Vault</b></p>
+
+<p style="font-size:16px; line-height:1.85; color:#5A5148; margin:10px 0; letter-spacing:2px;">若觉得有用，欢迎 Star、Fork，或把它分享给同样爱写字的朋友。</p>
+
+</section>
+</div><div class="reader-foot"><a class="text-link" href="/articles/">← 继续读点别的</a><a class="text-link" href="https://mp.weixin.qq.com/s/_CSb7TX7-n2PfjKBUr5zpA" target="_blank" rel="noopener noreferrer">在公众号阅读 ↗</a></div></article><aside class="reader-aside" aria-label="本文目录"><details open><summary>这一篇 · 阅读目录</summary><ol class="toc"><li><a href="#section-1">一、它到底解决什么</a></li><li><a href="#section-2">二、它是什么</a></li><li><a href="#section-3">三、核心特性</a></li><li><a href="#section-4">知识库侧</a></li><li><a href="#section-5">诗云侧（零依赖，纯 Node 标准库）</a></li><li><a href="#section-6">四、快速开始</a></li><li><a href="#section-7">环境要求</a></li><li><a href="#section-8">最省事：用 Agent 一站式配置项目并搭建诗云（推荐）</a></li><li><a href="#section-9">1. 目录约定</a></li><li><a href="#section-10">2. 启动诗云</a></li><li><a href="#section-11">3. 配置（可选）</a></li><li><a href="#section-12">4. 接入 Obsidian 实时数据源</a></li><li><a href="#section-13">5. 接入大模型</a></li><li><a href="#section-14">五、视频演示</a></li><li><a href="#section-15">六、技术细节（可跳过）</a></li><li><a href="#section-16">七、你可能关心的问题（FAQ）</a></li><li><a href="#section-17">写在最后</a></li></ol></details></aside></div></main><footer class="site-footer"><div class="container footer-row"><div><div class="footer-mark">不失赤子之心，不坠青云之志。</div><div class="footer-signature">龙川武生 · 心有所向，诗有所往。</div></div><div class="footer-links"><a href="/about/">关于这里</a><a href="/about/#wechat">微信公众号</a><a href="https://github.com/Longlong-hub" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="/feed.xml">RSS</a></div></div></footer><a href="#top" class="back-top" aria-label="回到顶部" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 13 6-6 6 6M12 7v13"/></svg></a></body></html>
