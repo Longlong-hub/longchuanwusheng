@@ -10,8 +10,8 @@ def adapt(text,source,target,base):
     text=text.replace(source,target)
     def prefix(m):
         q,p=m.groups()
-        return m.group(0) if p.startswith(('//','/#')) or p==base or p.startswith(base+'/') else q+base+p
-    text=re.sub(r"([\"'])(/[^\"'\s<>]*)",prefix,text)
+        return m.group(0) if p.startswith(('//','/#')) or p==base or p.startswith(base+'/') else q+base+p+q
+    text=re.sub(r"""(["'])(/[^"'\s<>]*)\1""",prefix,text)
     return re.sub(r'url\((/[^)\s]+)\)',lambda m:m.group(0) if m.group(1).startswith((base+'/','//')) else 'url('+base+m.group(1)+')',text)
 
 def version_browser_assets(output,base):
@@ -46,7 +46,8 @@ def verify(output,base,target):
                 if path.endswith('/') or not path:dest=dest/'index.html'
                 if not dest.is_file():issues.append('Missing '+path)
     for f in output.rglob('*.html'):
-        pages+=1;Inspector().feed(f.read_text(encoding='utf-8'))
+        pages+=1;html=f.read_text(encoding='utf-8');Inspector().feed(html)
+        if any(q+base+'/>' in html for q in ('"',"'")):issues.append('Invalid SVG closure in '+str(f))
     js=(output/'assets/app.js').read_text(encoding='utf-8')
     if "fetch('"+base+"/data/poems.json')" not in js:issues.append('Random poem data path')
     if "link.href='"+base+"/poetry/'+p.year+'/#'+p.anchor" not in js:issues.append('Random poem destination and fragment')
